@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.13.5 on win32)" generated="2025-07-26T19:46:02.955436" rpa="false" schemaversion="5">
+<suite id="s1" name="Main" source="C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\Web_Automation\main.robot">
+<test id="s1-t1" name="Enter Credentials and LoginPart" line="18">
+<kw name="Invalid Login" owner="Data_driven_testing_invalid_Login">
+<kw name="Load Credentials" owner="AdderLibrary">
+<msg time="2025-07-26T19:46:04.346291" level="INFO">username      password
+          standard_user  secret_sauce
+        locked_out_user  secret_sauce
+           problem_user  secret_sauce
+performance_glitch_user  secret_sauce
+              your_user your_password</msg>
+<msg time="2025-07-26T19:46:04.346425" level="INFO">${count} = 5</msg>
+<var>${count}</var>
+<arg>${EXCEL PATH}</arg>
+<arg>${SHEET NAME}</arg>
+<status status="PASS" start="2025-07-26T19:46:04.033966" elapsed="0.312485"/>
+</kw>
+<kw name="Add Two Numbers" owner="AdderLibrary">
+<msg time="2025-07-26T19:46:04.346828" level="INFO">${sum} = 3</msg>
+<var>${sum}</var>
+<arg>${count}</arg>
+<arg>2</arg>
+<status status="PASS" start="2025-07-26T19:46:04.346624" elapsed="0.000233"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-07-26T19:46:04.347127" level="INFO">${today} = 2025-07-26</msg>
+<var>${today}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-07-26T19:46:04.346964" elapsed="0.000182"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-26T19:46:04.347354" level="INFO">${folder} = Web_Automation/Test_Evidence/2025-07-26</msg>
+<var>${folder}</var>
+<arg>${EVIDENCE ROOT}/${today}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-26T19:46:04.347227" elapsed="0.000145"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2025-07-26T19:46:04.347896" level="INFO" html="true">Created directory '&lt;a href="file://C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\Web_Automation\Web_Automation\Test_Evidence\2025-07-26"&gt;C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\Web_Automation\Web_Automation\Test_Evidence\2025-07-26&lt;/a&gt;'.</msg>
+<arg>${folder}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2025-07-26T19:46:04.347443" elapsed="0.000549"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-26T19:46:04.348699" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com/v1/'.</msg>
+<msg time="2025-07-26T19:46:04.619648" level="WARN">There was an error managing msedgedriver (error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_138_WINDOWS)); using driver found in the cache</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-26T19:46:04.348508" elapsed="43.293110"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-26T19:46:47.641883" elapsed="0.054730"/>
+</kw>
+<kw name="Load Credentials" owner="AdderLibrary">
+<msg time="2025-07-26T19:46:47.706841" level="INFO">username      password
+          standard_user  secret_sauce
+        locked_out_user  secret_sauce
+           problem_user  secret_sauce
+performance_glitch_user  secret_sauce
+              your_user your_password</msg>
+<msg time="2025-07-26T19:46:47.706973" level="INFO">${msg} = 5</msg>
+<var>${msg}</var>
+<arg>${EXCEL PATH}</arg>
+<arg>${SHEET NAME}</arg>
+<status status="PASS" start="2025-07-26T19:46:47.696951" elapsed="0.010047"/>
+</kw>
+<kw name="Get Credential By Index" owner="AdderLibrary">
+<msg time="2025-07-26T19:46:47.707329" level="INFO">${username} = standard_user</msg>
+<msg time="2025-07-26T19:46:47.707365" level="INFO">${password} = secret_sauce</msg>
+<var>${username}</var>
+<var>${password}</var>
+<arg>${index}</arg>
+<status status="PASS" start="2025-07-26T19:46:47.707162" elapsed="0.000222"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-26T19:46:47.707491" elapsed="0.027119"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-26T19:46:47.735019" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-26T19:46:47.734794" elapsed="0.131024"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-26T19:46:47.865984" elapsed="0.017143"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-26T19:46:47.883544" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-26T19:46:47.883317" elapsed="0.081791"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2025-07-26T19:46:47.965709" level="INFO">${clean_name} = Enter_Credentials_and_LoginPart</msg>
+<var>${clean_name}</var>
+<arg>${TEST NAME}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-26T19:46:47.965379" elapsed="0.000365"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-26T19:46:47.966804" level="INFO">${file} = C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\Web_Automation/Web_Automation/Test_Evidence/2025-07-26/Enter_Credentials_and_LoginPart_1.png</msg>
+<var>${file}</var>
+<arg>C:\\Users\\arenaho.muhali\\PycharmProjects\\MUHALI_ARENAHO_HOLDINGS\\Web_Automation/${folder}/${clean_name}_${index + 1}.png</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-26T19:46:47.965900" elapsed="0.000942"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-07-26T19:46:48.191903" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Web_Automation/Test_Evidence/2025-07-26/Enter_Credentials_and_LoginPart_1.png"&gt;&lt;img src="../Web_Automation/Test_Evidence/2025-07-26/Enter_Credentials_and_LoginPart_1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-07-26T19:46:47.966982" elapsed="0.225031"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-26T19:46:48.192324" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-26T19:46:48.192168" elapsed="13.047158"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-07-26T19:47:01.483158" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Web_Automation/Test_Evidence/2025-07-26/Enter_Credentials_and_LoginPart_1.png"&gt;&lt;img src="../Web_Automation/Test_Evidence/2025-07-26/Enter_Credentials_and_LoginPart_1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-07-26T19:47:01.239730" elapsed="0.243542"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-26T19:47:16.484053" level="INFO">Slept 15 seconds.</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-26T19:47:01.483458" elapsed="15.000913"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2025-07-26T19:47:16.495305" level="INFO">${actual_title} = Swag Labs</msg>
+<var>${actual_title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-07-26T19:47:16.484587" elapsed="0.010770"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<arg>${actual_title}</arg>
+<arg>Swag Lab</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2025-07-26T19:47:16.495518" elapsed="0.000184"/>
+</kw>
+<var name="${index}">0</var>
+<status status="PASS" start="2025-07-26T19:46:04.348376" elapsed="72.147378"/>
+</iter>
+<iter>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-26T19:47:16.496665" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com/v1/'.</msg>
+<msg time="2025-07-26T19:47:16.659718" level="WARN">There was an error managing msedgedriver (error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_138_WINDOWS)); using driver found in the cache</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-26T19:47:16.496180" elapsed="26.854417"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-26T19:47:43.351009" elapsed="0.052412"/>
+</kw>
+<kw name="Load Credentials" owner="AdderLibrary">
+<msg time="2025-07-26T19:47:43.415732" level="INFO">username      password
+          standard_user  secret_sauce
+        locked_out_user  secret_sauce
+           problem_user  secret_sauce
+performance_glitch_user  secret_sauce
+              your_user your_password</msg>
+<msg time="2025-07-26T19:47:43.415965" level="INFO">${msg} = 5</msg>
+<var>${msg}</var>
+<arg>${EXCEL PATH}</arg>
+<arg>${SHEET NAME}</arg>
+<status status="PASS" start="2025-07-26T19:47:43.403690" elapsed="0.012349"/>
+</kw>
+<kw name="Get Credential By Index" owner="AdderLibrary">
+<msg time="2025-07-26T19:47:43.416652" level="INFO">${username} = locked_out_user</msg>
+<msg time="2025-07-26T19:47:43.416709" level="INFO">${password} = secret_sauce</msg>
+<var>${username}</var>
+<var>${password}</var>
+<arg>${index}</arg>
+<status status="PASS" start="2025-07-26T19:47:43.416316" elapsed="0.000424"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-26T19:47:43.416935" elapsed="0.028431"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-26T19:47:43.445806" level="INFO">Typing text 'locked_out_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-26T19:47:43.445563" elapsed="0.128201"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-26T19:47:43.573960" elapsed="0.013420"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-26T19:47:43.587805" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-26T19:47:43.587575" elapsed="0.084428"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2025-07-26T19:47:43.672647" level="INFO">${clean_name} = Enter_Credentials_and_LoginPart</msg>
+<var>${clean_name}</var>
+<arg>${TEST NAME}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-26T19:47:43.672318" elapsed="0.000370"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-26T19:47:43.673735" level="INFO">${file} = C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\Web_Automation/Web_Automation/Test_Evidence/2025-07-26/Enter_Credentials_and_LoginPart_2.png</msg>
+<var>${file}</var>
+<arg>C:\\Users\\arenaho.muhali\\PycharmProjects\\MUHALI_ARENAHO_HOLDINGS\\Web_Automation/${folder}/${clean_name}_${index + 1}.png</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-26T19:47:43.672857" elapsed="0.000918"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-07-26T19:47:43.871960" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Web_Automation/Test_Evidence/2025-07-26/Enter_Credentials_and_LoginPart_2.png"&gt;&lt;img src="../Web_Automation/Test_Evidence/2025-07-26/Enter_Credentials_and_LoginPart_2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-07-26T19:47:43.673943" elapsed="0.198108"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-26T19:47:43.872377" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-26T19:47:43.872217" elapsed="0.070508"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-07-26T19:47:44.098742" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Web_Automation/Test_Evidence/2025-07-26/Enter_Credentials_and_LoginPart_2.png"&gt;&lt;img src="../Web_Automation/Test_Evidence/2025-07-26/Enter_Credentials_and_LoginPart_2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-07-26T19:47:43.943020" elapsed="0.155896"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-26T19:47:59.100243" level="INFO">Slept 15 seconds.</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-26T19:47:44.099161" elapsed="15.001836"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2025-07-26T19:47:59.121517" level="INFO">${actual_title} = Swag Labs</msg>
+<var>${actual_title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-07-26T19:47:59.101779" elapsed="0.019830"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<arg>${actual_title}</arg>
+<arg>Swag Lab</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2025-07-26T19:47:59.121956" elapsed="0.000504"/>
+</kw>
+<var name="${index}">1</var>
+<status status="PASS" start="2025-07-26T19:47:16.495948" elapsed="42.626641"/>
+</iter>
+<iter>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-26T19:47:59.123939" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com/v1/'.</msg>
+<msg time="2025-07-26T19:47:59.318920" level="WARN">There was an error managing msedgedriver (error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_138_WINDOWS)); using driver found in the cache</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-26T19:47:59.123403" elapsed="16.856149"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2025-07-26T19:48:15.990158" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=138.0.3351.95)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff72cc581f5+23461]
+	(No symbol) [0x0x7ff72cbac2e0]
+	GetHandleVerifier [0x0x7ff72ced0128+2611928]
+	(No symbol) [0x0x7ff72c95d2ef]
+	(No symbol) [0x0x7ff72c9efad4]
+	(No symbol) [0x0x7ff72ca06e5a]
+	(No symbol) [0x0x7ff72c9ea423]
+	(No symbol) [0x0x7ff72c9bea86]
+	(No symbol) [0x0x7ff72c9bdd11]
+	(No symbol) [0x0x7ff72c9be8b3]
+	(No symbol) [0x0x7ff72cabdd3d]
+	(No symbol) [0x0x7ff72cacb0c8]
+	GetHandleVerifier [0x0x7ff72cd3803b+940523]
+	GetHandleVerifier [0x0x7ff72cd40d91+976705]
+	(No symbol) [0x0x7ff72cbb9ed1]
+	(No symbol) [0x0x7ff72cbb28b4]
+	(No symbol) [0x0x7ff72cbb2a03]
+	(No symbol) [0x0x7ff72cba44a6]
+	BaseThreadInitThunk [0x0x7ffe1094259d+29]
+	RtlUserThreadStart [0x0x7ffe1126af78+40]
+</msg>
+<msg time="2025-07-26T19:48:15.991574" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=138.0.3351.95)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff72cc581f5+23461]
+	(No symbol) [0x0x7ff72cbac2e0]
+	GetHandleVerifier [0x0x7ff72ced0128+2611928]
+	(No symbol) [0x0x7ff72c95d2ef]
+	(No symbol) [0x0x7ff72c9efad4]
+	(No symbol) [0x0x7ff72ca06e5a]
+	(No symbol) [0x0x7ff72c9ea423]
+	(No symbol) [0x0x7ff72c9bea86]
+	(No symbol) [0x0x7ff72c9bdd11]
+	(No symbol) [0x0x7ff72c9be8b3]
+	(No symbol) [0x0x7ff72cabdd3d]
+	(No symbol) [0x0x7ff72cacb0c8]
+	GetHandleVerifier [0x0x7ff72cd3803b+940523]
+	GetHandleVerifier [0x0x7ff72cd40d91+976705]
+	(No symbol) [0x0x7ff72cbb9ed1]
+	(No symbol) [0x0x7ff72cbb28b4]
+	(No symbol) [0x0x7ff72cbb2a03]
+	(No symbol) [0x0x7ff72cba44a6]
+	BaseThreadInitThunk [0x0x7ffe1094259d+29]
+	RtlUserThreadStart [0x0x7ffe1126af78+40]
+</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="FAIL" start="2025-07-26T19:48:15.979821" elapsed="0.027362">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=138.0.3351.95)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff72cc581f5+23461]
+	(No symbol) [0x0x7ff72cbac2e0]
+	GetHandleVerifier [0x0x7ff72ced0128+2611928]
+	(No symbol) [0x0x7ff72c95d2ef]
+	(No symbol) [0x0x7ff72c9efad4]
+	(No symbol) [0x0x7ff72ca06e5a]
+	(No symbol) [0x0x7ff72c9ea423]
+	(No symbol) [0x0x7ff72c9bea86]
+	(No symbol) [0x0x7ff72c9bdd11]
+	(No symbol) [0x0x7ff72c9be8b3]
+	(No symbol) [0x0x7ff72cabdd3d]
+	(No symbol) [0x0x7ff72cacb0c8]
+	GetHandleVerifier [0x0x7ff72cd3803b+940523]
+	GetHandleVerifier [0x0x7ff72cd40d91+976705]
+	(No symbol) [0x0x7ff72cbb9ed1]
+	(No symbol) [0x0x7ff72cbb28b4]
+	(No symbol) [0x0x7ff72cbb2a03]
+	(No symbol) [0x0x7ff72cba44a6]
+	BaseThreadInitThunk [0x0x7ffe1094259d+29]
+	RtlUserThreadStart [0x0x7ffe1126af78+40]
+</status>
+</kw>
+<kw name="Load Credentials" owner="AdderLibrary">
+<var>${msg}</var>
+<arg>${EXCEL PATH}</arg>
+<arg>${SHEET NAME}</arg>
+<status status="NOT RUN" start="2025-07-26T19:48:16.007510" elapsed="0.000063"/>
+</kw>
+<kw name="Get Credential By Index" owner="AdderLibrary">
+<var>${username}</var>
+<var>${password}</var>
+<arg>${index}</arg>
+<status status="NOT RUN" start="2025-07-26T19:48:16.007743" elapsed="0.000035"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:16.007928" elapsed="0.000028"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:16.008055" elapsed="0.000019"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:16.008157" elapsed="0.000028"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:16.008263" elapsed="0.000025"/>
+</kw>
+<kw name="Replace String" owner="String">
+<var>${clean_name}</var>
+<arg>${TEST NAME}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:16.008392" elapsed="0.000026"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${file}</var>
+<arg>C:\\Users\\arenaho.muhali\\PycharmProjects\\MUHALI_ARENAHO_HOLDINGS\\Web_Automation/${folder}/${clean_name}_${index + 1}.png</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:16.008521" elapsed="0.000020"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:16.008618" elapsed="0.000018"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:16.008714" elapsed="0.000022"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:16.008839" elapsed="0.000032"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:16.008971" elapsed="0.000027"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<var>${actual_title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:16.009109" elapsed="0.000026"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<arg>${actual_title}</arg>
+<arg>Swag Lab</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:16.009267" elapsed="0.000028"/>
+</kw>
+<var name="${index}">2</var>
+<status status="FAIL" start="2025-07-26T19:47:59.123091" elapsed="16.886303">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=138.0.3351.95)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff72cc581f5+23461]
+	(No symbol) [0x0x7ff72cbac2e0]
+	GetHandleVerifier [0x0x7ff72ced0128+2611928]
+	(No symbol) [0x0x7ff72c95d2ef]
+	(No symbol) [0x0x7ff72c9efad4]
+	(No symbol) [0x0x7ff72ca06e5a]
+	(No symbol) [0x0x7ff72c9ea423]
+	(No symbol) [0x0x7ff72c9bea86]
+	(No symbol) [0x0x7ff72c9bdd11]
+	(No symbol) [0x0x7ff72c9be8b3]
+	(No symbol) [0x0x7ff72cabdd3d]
+	(No symbol) [0x0x7ff72cacb0c8]
+	GetHandleVerifier [0x0x7ff72cd3803b+940523]
+	GetHandleVerifier [0x0x7ff72cd40d91+976705]
+	(No symbol) [0x0x7ff72cbb9ed1]
+	(No symbol) [0x0x7ff72cbb28b4]
+	(No symbol) [0x0x7ff72cbb2a03]
+	(No symbol) [0x0x7ff72cba44a6]
+	BaseThreadInitThunk [0x0x7ffe1094259d+29]
+	RtlUserThreadStart [0x0x7ffe1126af78+40]
+</status>
+</iter>
+<var>${index}</var>
+<value>${sum}</value>
+<status status="FAIL" start="2025-07-26T19:46:04.348105" elapsed="131.661406">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=138.0.3351.95)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff72cc581f5+23461]
+	(No symbol) [0x0x7ff72cbac2e0]
+	GetHandleVerifier [0x0x7ff72ced0128+2611928]
+	(No symbol) [0x0x7ff72c95d2ef]
+	(No symbol) [0x0x7ff72c9efad4]
+	(No symbol) [0x0x7ff72ca06e5a]
+	(No symbol) [0x0x7ff72c9ea423]
+	(No symbol) [0x0x7ff72c9bea86]
+	(No symbol) [0x0x7ff72c9bdd11]
+	(No symbol) [0x0x7ff72c9be8b3]
+	(No symbol) [0x0x7ff72cabdd3d]
+	(No symbol) [0x0x7ff72cacb0c8]
+	GetHandleVerifier [0x0x7ff72cd3803b+940523]
+	GetHandleVerifier [0x0x7ff72cd40d91+976705]
+	(No symbol) [0x0x7ff72cbb9ed1]
+	(No symbol) [0x0x7ff72cbb28b4]
+	(No symbol) [0x0x7ff72cbb2a03]
+	(No symbol) [0x0x7ff72cba44a6]
+	BaseThreadInitThunk [0x0x7ffe1094259d+29]
+	RtlUserThreadStart [0x0x7ffe1126af78+40]
+</status>
+</for>
+<kw name="Log" owner="BuiltIn">
+<arg>Outside loop</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:16.009715" elapsed="0.000030"/>
+</kw>
+<status status="FAIL" start="2025-07-26T19:46:04.032839" elapsed="131.977087">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=138.0.3351.95)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff72cc581f5+23461]
+	(No symbol) [0x0x7ff72cbac2e0]
+	GetHandleVerifier [0x0x7ff72ced0128+2611928]
+	(No symbol) [0x0x7ff72c95d2ef]
+	(No symbol) [0x0x7ff72c9efad4]
+	(No symbol) [0x0x7ff72ca06e5a]
+	(No symbol) [0x0x7ff72c9ea423]
+	(No symbol) [0x0x7ff72c9bea86]
+	(No symbol) [0x0x7ff72c9bdd11]
+	(No symbol) [0x0x7ff72c9be8b3]
+	(No symbol) [0x0x7ff72cabdd3d]
+	(No symbol) [0x0x7ff72cacb0c8]
+	GetHandleVerifier [0x0x7ff72cd3803b+940523]
+	GetHandleVerifier [0x0x7ff72cd40d91+976705]
+	(No symbol) [0x0x7ff72cbb9ed1]
+	(No symbol) [0x0x7ff72cbb28b4]
+	(No symbol) [0x0x7ff72cbb2a03]
+	(No symbol) [0x0x7ff72cba44a6]
+	BaseThreadInitThunk [0x0x7ffe1094259d+29]
+	RtlUserThreadStart [0x0x7ffe1126af78+40]
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:16.010210" elapsed="0.000032"/>
+</kw>
+<kw name="Run PDF Combiner Script">
+<status status="NOT RUN" start="2025-07-26T19:48:16.010566" elapsed="0.000035"/>
+</kw>
+<status status="FAIL" start="2025-07-26T19:46:04.032229" elapsed="131.978563">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=138.0.3351.95)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff72cc581f5+23461]
+	(No symbol) [0x0x7ff72cbac2e0]
+	GetHandleVerifier [0x0x7ff72ced0128+2611928]
+	(No symbol) [0x0x7ff72c95d2ef]
+	(No symbol) [0x0x7ff72c9efad4]
+	(No symbol) [0x0x7ff72ca06e5a]
+	(No symbol) [0x0x7ff72c9ea423]
+	(No symbol) [0x0x7ff72c9bea86]
+	(No symbol) [0x0x7ff72c9bdd11]
+	(No symbol) [0x0x7ff72c9be8b3]
+	(No symbol) [0x0x7ff72cabdd3d]
+	(No symbol) [0x0x7ff72cacb0c8]
+	GetHandleVerifier [0x0x7ff72cd3803b+940523]
+	GetHandleVerifier [0x0x7ff72cd40d91+976705]
+	(No symbol) [0x0x7ff72cbb9ed1]
+	(No symbol) [0x0x7ff72cbb28b4]
+	(No symbol) [0x0x7ff72cbb2a03]
+	(No symbol) [0x0x7ff72cba44a6]
+	BaseThreadInitThunk [0x0x7ffe1094259d+29]
+	RtlUserThreadStart [0x0x7ffe1126af78+40]
+</status>
+</test>
+<test id="s1-t2" name="addTocart" line="22">
+<kw name="Valid Logint">
+<msg time="2025-07-26T19:48:16.013611" level="FAIL">No keyword with name 'Valid Logint' found. Did you mean:
+    login_test.Valid LogintEST
+    Data_driven_testing_invalid_Login.Invalid Login</msg>
+<status status="FAIL" start="2025-07-26T19:48:16.013474" elapsed="0.000224">No keyword with name 'Valid Logint' found. Did you mean:
+    login_test.Valid LogintEST
+    Data_driven_testing_invalid_Login.Invalid Login</status>
+</kw>
+<kw name="AddTocart" owner="addTocart">
+<status status="NOT RUN" start="2025-07-26T19:48:16.014280" elapsed="0.000091"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:16.014584" elapsed="0.000053"/>
+</kw>
+<kw name="Run PDF Combiner Script">
+<status status="NOT RUN" start="2025-07-26T19:48:16.014905" elapsed="0.000054"/>
+</kw>
+<status status="FAIL" start="2025-07-26T19:48:16.011207" elapsed="0.004034">No keyword with name 'Valid Logint' found. Did you mean:
+    login_test.Valid LogintEST
+    Data_driven_testing_invalid_Login.Invalid Login</status>
+</test>
+<test id="s1-t3" name="Valid_Login" line="27">
+<kw name="Valid LogintEST" owner="login_test">
+<kw name="Load Credentials" owner="AdderLibrary">
+<msg time="2025-07-26T19:48:16.035126" level="INFO">username      password
+          standard_user  secret_sauce
+        locked_out_user  secret_sauce
+           problem_user  secret_sauce
+performance_glitch_user  secret_sauce
+              your_user your_password</msg>
+<msg time="2025-07-26T19:48:16.035433" level="INFO">${count} = 5</msg>
+<var>${count}</var>
+<arg>${EXCEL PATH}</arg>
+<status status="PASS" start="2025-07-26T19:48:16.016583" elapsed="0.018903"/>
+</kw>
+<kw name="Add Two Numbers" owner="AdderLibrary">
+<msg time="2025-07-26T19:48:16.036154" level="INFO">${sum} = 3</msg>
+<var>${sum}</var>
+<arg>${count}</arg>
+<arg>2</arg>
+<status status="PASS" start="2025-07-26T19:48:16.035826" elapsed="0.000385"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-07-26T19:48:16.036839" level="INFO">${today} = 2025-07-26</msg>
+<var>${today}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-07-26T19:48:16.036436" elapsed="0.000475"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-26T19:48:16.037363" level="INFO">${folder} = Web_Automation/Test_Evidence/2025-07-26</msg>
+<var>${folder}</var>
+<arg>${EVIDENCE ROOT}/${today}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-26T19:48:16.037124" elapsed="0.000275"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2025-07-26T19:48:16.037827" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\Web_Automation\Web_Automation\Test_Evidence\2025-07-26"&gt;C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\Web_Automation\Web_Automation\Test_Evidence\2025-07-26&lt;/a&gt;' already exists.</msg>
+<arg>${folder}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2025-07-26T19:48:16.037555" elapsed="0.000349"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-26T19:48:16.040079" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com/v1/'.</msg>
+<msg time="2025-07-26T19:48:16.215201" level="WARN">There was an error managing msedgedriver (error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_138_WINDOWS)); using driver found in the cache</msg>
+<msg time="2025-07-26T19:48:27.676900" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000252B40903E0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5cd3de27e371436a9ea2ede42baf3805/screenshot</msg>
+<msg time="2025-07-26T19:48:31.757193" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000252B3F685F0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5cd3de27e371436a9ea2ede42baf3805/screenshot</msg>
+<msg time="2025-07-26T19:48:35.856024" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000252B3F7F680&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5cd3de27e371436a9ea2ede42baf3805/screenshot</msg>
+<msg time="2025-07-26T19:48:39.959791" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=58293): Max retries exceeded with url: /session/5cd3de27e371436a9ea2ede42baf3805/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000252B3F7FF00&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-07-26T19:48:16.039708" elapsed="23.920522">Execution terminated by signal</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:39.960706" elapsed="0.000097"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<arg>Swag Labs</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:39.961074" elapsed="0.000063"/>
+</kw>
+<kw name="Load Credentials" owner="AdderLibrary">
+<var>${msg}</var>
+<arg>${EXCEL PATH}</arg>
+<status status="NOT RUN" start="2025-07-26T19:48:39.961417" elapsed="0.000065"/>
+</kw>
+<kw name="Get Credential By Index" owner="AdderLibrary">
+<var>${username}</var>
+<var>${password}</var>
+<arg>${index}</arg>
+<status status="NOT RUN" start="2025-07-26T19:48:39.961727" elapsed="0.000065"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:39.962060" elapsed="0.000066"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:39.962838" elapsed="0.000092"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:39.963191" elapsed="0.000061"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:39.963480" elapsed="0.000056"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<var>${random}</var>
+<arg>8</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:39.963764" elapsed="0.000055"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${file}</var>
+<arg>${folder}/${random}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:39.964040" elapsed="0.000056"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${file}</var>
+<arg>C:\\Users\\arenaho.muhali\\PycharmProjects\\MUHALI_ARENAHO_HOLDINGS\\Web_Automation/${folder}/${TEST NAME}_${index + 1}.png</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:39.964297" elapsed="0.000052"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:39.964900" elapsed="0.000069"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:39.965170" elapsed="0.000051"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:39.965414" elapsed="0.000050"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<arg>Swag Labs</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:39.965649" elapsed="0.000049"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:39.965877" elapsed="0.000048"/>
+</kw>
+<var name="${index}">0</var>
+<status status="FAIL" start="2025-07-26T19:48:16.039446" elapsed="23.926614">Execution terminated by signal</status>
+</iter>
+<var>${index}</var>
+<value>${sum}</value>
+<status status="FAIL" start="2025-07-26T19:48:16.038018" elapsed="23.928203">Execution terminated by signal</status>
+</for>
+<kw name="Log" owner="BuiltIn">
+<arg>Outside loop</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:39.966497" elapsed="0.000052"/>
+</kw>
+<status status="FAIL" start="2025-07-26T19:48:16.016186" elapsed="23.950569">Execution terminated by signal</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-07-26T19:48:39.966967" elapsed="0.000051"/>
+</kw>
+<kw name="Run PDF Combiner Script">
+<status status="NOT RUN" start="2025-07-26T19:48:39.967295" elapsed="0.000062"/>
+</kw>
+<status status="FAIL" start="2025-07-26T19:48:16.015625" elapsed="23.951992">Execution terminated by signal</status>
+</test>
+<status status="FAIL" start="2025-07-26T19:46:02.957080" elapsed="157.011276"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Main" id="s1" pass="0" fail="3" skip="0">Main</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-07-26T19:46:03.002870" level="ERROR">Error in file 'C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\Web_Automation\main.robot' on line 2: Importing library 'DataDriver' failed: ModuleNotFoundError: No module named 'DataDriver'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\.venv\Scripts\robot.exe
+  C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS
+  C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\Web_Automation
+  C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\.venv\Scripts\python313.zip
+  C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\DLLs
+  C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib
+  C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313
+  C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\.venv
+  C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\.venv\Lib\site-packages</msg>
+<msg time="2025-07-26T19:46:03.004699" level="ERROR">Error in file 'C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\Web_Automation\login.robot' on line 11: Setting 'Suite Setup' is not allowed in resource file.</msg>
+<msg time="2025-07-26T19:46:04.619648" level="WARN">There was an error managing msedgedriver (error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_138_WINDOWS)); using driver found in the cache</msg>
+<msg time="2025-07-26T19:47:16.659718" level="WARN">There was an error managing msedgedriver (error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_138_WINDOWS)); using driver found in the cache</msg>
+<msg time="2025-07-26T19:47:59.318920" level="WARN">There was an error managing msedgedriver (error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_138_WINDOWS)); using driver found in the cache</msg>
+<msg time="2025-07-26T19:48:15.990158" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=138.0.3351.95)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff72cc581f5+23461]
+	(No symbol) [0x0x7ff72cbac2e0]
+	GetHandleVerifier [0x0x7ff72ced0128+2611928]
+	(No symbol) [0x0x7ff72c95d2ef]
+	(No symbol) [0x0x7ff72c9efad4]
+	(No symbol) [0x0x7ff72ca06e5a]
+	(No symbol) [0x0x7ff72c9ea423]
+	(No symbol) [0x0x7ff72c9bea86]
+	(No symbol) [0x0x7ff72c9bdd11]
+	(No symbol) [0x0x7ff72c9be8b3]
+	(No symbol) [0x0x7ff72cabdd3d]
+	(No symbol) [0x0x7ff72cacb0c8]
+	GetHandleVerifier [0x0x7ff72cd3803b+940523]
+	GetHandleVerifier [0x0x7ff72cd40d91+976705]
+	(No symbol) [0x0x7ff72cbb9ed1]
+	(No symbol) [0x0x7ff72cbb28b4]
+	(No symbol) [0x0x7ff72cbb2a03]
+	(No symbol) [0x0x7ff72cba44a6]
+	BaseThreadInitThunk [0x0x7ffe1094259d+29]
+	RtlUserThreadStart [0x0x7ffe1126af78+40]
+</msg>
+<msg time="2025-07-26T19:48:16.215201" level="WARN">There was an error managing msedgedriver (error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_138_WINDOWS)); using driver found in the cache</msg>
+<msg time="2025-07-26T19:48:27.676900" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000252B40903E0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5cd3de27e371436a9ea2ede42baf3805/screenshot</msg>
+<msg time="2025-07-26T19:48:31.757193" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000252B3F685F0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5cd3de27e371436a9ea2ede42baf3805/screenshot</msg>
+<msg time="2025-07-26T19:48:35.856024" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000252B3F7F680&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5cd3de27e371436a9ea2ede42baf3805/screenshot</msg>
+<msg time="2025-07-26T19:48:39.959791" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=58293): Max retries exceeded with url: /session/5cd3de27e371436a9ea2ede42baf3805/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000252B3F7FF00&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
+</errors>
+</robot>

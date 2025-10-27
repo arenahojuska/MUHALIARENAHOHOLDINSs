@@ -1,0 +1,68 @@
+{"level":30,"time":"2025-08-29T12:48:15.789Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Listening on 127.0.0.1:53551"}
+(node:31484) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-08-29T12:48:16.050Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-08-29T12:48:27.235Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Adding browser to stack: chromium, version: 140.0.7339.16"}
+{"level":30,"time":"2025-08-29T12:48:27.237Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-08-29T12:48:27.236Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-08-29T12:48:27.249Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-08-29T12:48:27.249Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":720,\"width\":1280}}"}
+{"level":30,"time":"2025-08-29T12:48:27.249Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@e388cb27de0d6909ed18422fc3082a59\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=2f01481e-de69-424b-8219-7ee325c18905\"}"}
+{"level":30,"time":"2025-08-29T12:48:27.250Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Trace file: "}
+{"level":30,"time":"2025-08-29T12:48:27.266Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Setting default timeout for context context=8b3bc6fc-5273-4e44-b6ad-c713267d3a4d to 10000"}
+{"level":30,"time":"2025-08-29T12:48:27.267Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"End of node method newContext"}
+{"level":30,"time":"2025-08-29T12:48:27.267Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Changed active context: context=8b3bc6fc-5273-4e44-b6ad-c713267d3a4d"}
+{"level":30,"time":"2025-08-29T12:48:27.277Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-08-29T12:48:27.278Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@e388cb27de0d6909ed18422fc3082a59\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=8b3bc6fc-5273-4e44-b6ad-c713267d3a4d\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@02aa298b572bc8152aa28ae39ea98953\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":720,\"width\":1280}},\"traceFile\":\"\"}],\"id\":\"browser=2f01481e-de69-424b-8219-7ee325c18905\"}"}
+{"level":30,"time":"2025-08-29T12:48:27.444Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Video path: undefined"}
+{"level":30,"time":"2025-08-29T12:48:27.444Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Changed active page"}
+{"level":30,"time":"2025-08-29T12:48:28.539Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"End of node method newPage"}
+{"level":30,"time":"2025-08-29T12:48:28.560Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-08-29T12:48:28.560Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Strict mode is enabled, find Locator with id=user-name in page."}
+{"level":30,"time":"2025-08-29T12:48:28.594Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-08-29T12:48:28.601Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-08-29T12:48:28.601Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Strict mode is enabled, find Locator with id=user-name in page."}
+{"level":30,"time":"2025-08-29T12:48:28.627Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"End of node method fillText"}
+{"level":30,"time":"2025-08-29T12:48:28.633Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-08-29T12:48:28.633Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Strict mode is enabled, find Locator with id=password in page."}
+{"level":30,"time":"2025-08-29T12:48:28.640Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-08-29T12:48:28.645Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-08-29T12:48:28.646Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Strict mode is enabled, find Locator with id=password in page."}
+{"level":30,"time":"2025-08-29T12:48:28.659Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"End of node method fillText"}
+{"level":30,"time":"2025-08-29T12:48:28.670Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-08-29T12:48:28.671Z","pid":31484,"hostname":"03RNBC-8C20DL3","Take screenshot with options: ":{"path":"C:\\Users\\arenaho.muhali\\PycharmProjects\\MUHALI_ARENAHO_HOLDINGS\\log\\browser\\screenshot\\path=C:\\Users\\arenaho.muhali\\PycharmProjects\\MUHALI_ARENAHO_HOLDINGS\\Web_Automation\\Web_Automation\\Test_Evidence\\2025-08-29\\Invalid_Login_1.png.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-08-29T12:48:28.779Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Error of node method  takeScreenshot"}
+================= Original suppressed error =================
+Error: ENOENT: no such file or directory, open 'C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\log\browser\screenshot\path=C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\Web_Automation\Web_Automation\Test_Evidence\2025-08-29\Invalid_Login_1.png.png'
+    at async open (node:internal/fs/promises:639:25)
+    at async Object.writeFile (node:internal/fs/promises:1213:14)
+    at async Page.screenshot (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\client\page.js:476:7)
+    at async takeScreenshot (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:10783:5)
+    at async PlaywrightServer.takeScreenshot (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13137:28) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\arenaho.muhali\\PycharmProjects\\MUHALI_ARENAHO_HOLDINGS\\log\\browser\\screenshot\\path=C:\\Users\\arenaho.muhali\\PycharmProjects\\MUHALI_ARENAHO_HOLDINGS\\Web_Automation\\Web_Automation\\Test_Evidence\\2025-08-29\\Invalid_Login_1.png.png'
+}
+=============================================================
+{"level":30,"time":"2025-08-29T12:48:28.790Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-08-29T12:48:28.790Z","pid":31484,"hostname":"03RNBC-8C20DL3","Take screenshot with options: ":{"path":"C:\\Users\\arenaho.muhali\\PycharmProjects\\MUHALI_ARENAHO_HOLDINGS\\log\\browser\\screenshot\\fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-08-29T12:48:28.905Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-08-29T12:48:29.009Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-29T12:48:29.014Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-29T12:48:29.018Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-29T12:48:29.022Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-29T12:48:29.025Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-29T12:48:29.028Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-29T12:48:29.033Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-29T12:48:29.035Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-29T12:48:29.039Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Changed active context: context=8b3bc6fc-5273-4e44-b6ad-c713267d3a4d"}
+{"level":30,"time":"2025-08-29T12:48:29.039Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Changing current active page: page=a1876b75-eb3c-49a3-97a5-58e46f0e8487"}
+{"level":30,"time":"2025-08-29T12:48:29.039Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Changed active page"}
+{"level":30,"time":"2025-08-29T12:48:29.043Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Start of node method closeContext"}
+{"level":30,"time":"2025-08-29T12:48:29.052Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Removed page=42df568a-db37-401b-bb03-776bd86b1173 from context=8b3bc6fc-5273-4e44-b6ad-c713267d3a4d page stack"}
+{"level":30,"time":"2025-08-29T12:48:29.054Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"End of node method closeContext"}
+{"level":30,"time":"2025-08-29T12:48:29.063Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-29T12:48:29.063Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-29T12:48:31.132Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-08-29T12:48:31.401Z","pid":31484,"hostname":"03RNBC-8C20DL3","msg":"End of node method closeAllBrowsers"}

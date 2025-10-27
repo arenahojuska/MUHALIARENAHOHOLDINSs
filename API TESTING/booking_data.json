@@ -1,0 +1,148 @@
+
+[
+  {
+    "firstname": "Mpho",
+    "lastname": "Pillay",
+    "totalprice": 485,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2025-08-08",
+      "checkout": "2025-08-11"
+    },
+    "additionalneeds": "Dinner"
+  },
+  {
+    "firstname": "Themba",
+    "lastname": "Ngcobo",
+    "totalprice": 185,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2025-08-07",
+      "checkout": "2025-08-09"
+    },
+    "additionalneeds": "Lunch"
+  },
+  {
+    "firstname": "Kabelo",
+    "lastname": "Mahlangu",
+    "totalprice": 161,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-08-07",
+      "checkout": "2025-08-17"
+    },
+    "additionalneeds": "Parking"
+  },
+  {
+    "firstname": "Ayanda",
+    "lastname": "Sithole",
+    "totalprice": 217,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-08-04",
+      "checkout": "2025-08-10"
+    },
+    "additionalneeds": "None"
+  },
+  {
+    "firstname": "Nomsa",
+    "lastname": "Mahlangu",
+    "totalprice": 453,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-08-08",
+      "checkout": "2025-08-09"
+    },
+    "additionalneeds": "Lunch"
+  },
+  {
+    "firstname": "Naledi",
+    "lastname": "Khumalo",
+    "totalprice": 329,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2025-08-01",
+      "checkout": "2025-08-02"
+    },
+    "additionalneeds": "Dinner"
+  },
+  {
+    "firstname": "Zanele",
+    "lastname": "Van der Merwe",
+    "totalprice": 127,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2025-08-05",
+      "checkout": "2025-08-08"
+    },
+    "additionalneeds": "Breakfast"
+  },
+  {
+    "firstname": "Sibusiso",
+    "lastname": "Sithole",
+    "totalprice": 439,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-08-06",
+      "checkout": "2025-08-13"
+    },
+    "additionalneeds": "Parking"
+  },
+  {
+    "firstname": "Nokuthula",
+    "lastname": "Naidoo",
+    "totalprice": 161,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2025-08-09",
+      "checkout": "2025-08-10"
+    },
+    "additionalneeds": "Dinner"
+  },
+  {
+    "firstname": "Zanele",
+    "lastname": "Pillay",
+    "totalprice": 259,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2025-08-04",
+      "checkout": "2025-08-13"
+    },
+    "additionalneeds": "Dinner"
+  },
+  {
+    "firstname": "Themba",
+    "lastname": "Jansen",
+    "totalprice": 474,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2025-08-11",
+      "checkout": "2025-08-17"
+    },
+    "additionalneeds": "Parking"
+  },
+  {
+    "firstname": "Lerato",
+    "lastname": "Van der Merwe",
+    "totalprice": 133,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2025-08-03",
+      "checkout": "2025-08-12"
+    },
+    "additionalneeds": "Parking"
+  },
+  {
+    "firstname": "Gugu",
+    "lastname": "Dlamini",
+    "totalprice": 489,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-08-04",
+      "checkout": "2025-08-06"
+    },
+    "additionalneeds": "Lunch"
+  }
+]
+
+  

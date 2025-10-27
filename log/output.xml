@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.13.5 on win32)" generated="2025-10-22T14:57:17.065170" rpa="false" schemaversion="5">
+<suite id="s1" name="Loginapp" source="C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\ANDROID TESTING\Loginapp.robot">
+<test id="s1-t1" name="Loginn" line="16">
+<kw name="Load Credentials" owner="AdderLibrary">
+<msg time="2025-10-22T14:57:20.623995" level="INFO">username        password
+ v60922ctjd@jkotypc.com $yuSsH#JsBES4RH
+        locked_out_user    secret_sauce
+           problem_user    secret_sauce
+performance_glitch_user    secret_sauce
+              your_user   your_password
+                    NaN             NaN
+          standard_user    secret_sauce</msg>
+<msg time="2025-10-22T14:57:20.626036" level="INFO">${count} = 7</msg>
+<var>${count}</var>
+<arg>${EXCEL PATH}</arg>
+<status status="PASS" start="2025-10-22T14:57:20.139819" elapsed="0.486284"/>
+</kw>
+<kw name="Add Two Numbers" owner="AdderLibrary">
+<msg time="2025-10-22T14:57:20.626611" level="INFO">${sum} = 7</msg>
+<var>${sum}</var>
+<arg>${count}</arg>
+<arg>0</arg>
+<status status="PASS" start="2025-10-22T14:57:20.626315" elapsed="0.000357"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Open_App" owner="open">
+<kw name="Open Application" owner="AppiumLibrary">
+<msg time="2025-10-22T14:57:22.670348" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001EEF25E3770&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session</msg>
+<msg time="2025-10-22T14:57:24.731491" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001EEF2702E90&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session</msg>
+<msg time="2025-10-22T14:57:26.753236" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001EEF2703250&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session</msg>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2025-10-22T14:57:28.804257" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2025-10-22T14:57:28.803185" elapsed="0.229463">No application is open</status>
+</kw>
+<msg time="2025-10-22T14:57:29.033338" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2025-10-22T14:57:29.033542" level="FAIL">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001EEF26CF100&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
+<arg>http://127.0.0.1:4723</arg>
+<arg>platformName=Android</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>deviceName=emulator-5556</arg>
+<arg>appPackage=fi.android.takealot</arg>
+<arg>appActivity=fi.android.takealot.presentation.splash.view.impl.ViewSplashScreenActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="FAIL" start="2025-10-22T14:57:20.628074" elapsed="8.410367">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001EEF26CF100&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-10-22T14:57:29.038681" elapsed="0.000085"/>
+</kw>
+<status status="FAIL" start="2025-10-22T14:57:20.627754" elapsed="8.411134">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001EEF26CF100&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</status>
+</kw>
+<kw name="Get Credential By Index" owner="AdderLibrary">
+<var>${username}</var>
+<var>${password}</var>
+<arg>${index}</arg>
+<status status="NOT RUN" start="2025-10-22T14:57:29.038994" elapsed="0.000125"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.ImageView[@content-desc="Cart"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" start="2025-10-22T14:57:29.039210" elapsed="0.000057"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.widget.ImageView[@content-desc="Cart"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" start="2025-10-22T14:57:29.039345" elapsed="0.000046"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id="fi.android.takealot:id/input_field_text_input" and @text="Email Address"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" start="2025-10-22T14:57:29.039473" elapsed="0.000047"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id="fi.android.takealot:id/input_field_text_input" and @text="Email Address"]</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" start="2025-10-22T14:57:29.039617" elapsed="0.000047"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id="fi.android.takealot:id/input_field_text_input" and @text="Password"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" start="2025-10-22T14:57:29.039737" elapsed="0.000048"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id="fi.android.takealot:id/input_field_text_input" and @text="Password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" start="2025-10-22T14:57:29.039857" elapsed="0.000040"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>//android.widget.Button[@resource-id="fi.android.takealot:id/auth_login_dynamic_form_call_to_action"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" start="2025-10-22T14:57:29.039965" elapsed="0.000041"/>
+</kw>
+<var name="${index}">0</var>
+<status status="FAIL" start="2025-10-22T14:57:20.627390" elapsed="8.412669">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001EEF26CF100&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</status>
+</iter>
+<var>${index}</var>
+<value>${sum}</value>
+<status status="FAIL" start="2025-10-22T14:57:20.626767" elapsed="8.413372">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001EEF26CF100&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</status>
+</for>
+<kw name="Log" owner="BuiltIn">
+<arg>Finished testing all users</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-10-22T14:57:29.040503" elapsed="0.000099"/>
+</kw>
+<status status="FAIL" start="2025-10-22T14:57:20.138772" elapsed="8.902028">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001EEF26CF100&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</status>
+</test>
+<status status="FAIL" start="2025-10-22T14:57:17.087454" elapsed="11.954347"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Loginapp" id="s1" pass="0" fail="1" skip="0">Loginapp</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-10-22T14:57:22.670348" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001EEF25E3770&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session</msg>
+<msg time="2025-10-22T14:57:24.731491" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001EEF2702E90&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session</msg>
+<msg time="2025-10-22T14:57:26.753236" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001EEF2703250&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session</msg>
+<msg time="2025-10-22T14:57:29.033338" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

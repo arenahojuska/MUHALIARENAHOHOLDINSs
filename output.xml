@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.13.5 on win32)" generated="2025-07-18T08:17:09.135949" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\Web_Automation\login_test.robot">
+<test id="s1-t1" name="Load And Print Credentials" line="8">
+<kw name="Load Credentials">
+<msg time="2025-07-18T08:17:09.187531" level="FAIL">No keyword with name 'Load Credentials' found.</msg>
+<arg>Book11.xlsx</arg>
+<status status="FAIL" start="2025-07-18T08:17:09.187234" elapsed="0.000367">No keyword with name 'Load Credentials' found.</status>
+</kw>
+<kw name="Get Credential By Index">
+<var>${username}</var>
+<var>${password}</var>
+<arg>${INDEX}</arg>
+<status status="NOT RUN" start="2025-07-18T08:17:09.187906" elapsed="0.000028"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Username: ${username}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-07-18T08:17:09.188206" elapsed="0.000032"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Password: ${password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-07-18T08:17:09.188408" elapsed="0.000018"/>
+</kw>
+<status status="FAIL" start="2025-07-18T08:17:09.185102" elapsed="0.003608">No keyword with name 'Load Credentials' found.</status>
+</test>
+<status status="FAIL" start="2025-07-18T08:17:09.138714" elapsed="0.050539"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="0" fail="1" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-07-18T08:17:09.183428" level="ERROR">Error in file 'C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\Web_Automation\login_test.robot' on line 2: Library 'test_data.py' does not exist.</msg>
+</errors>
+</robot>
