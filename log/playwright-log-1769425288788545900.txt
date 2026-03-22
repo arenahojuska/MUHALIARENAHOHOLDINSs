@@ -1,0 +1,13 @@
+{"level":30,"time":"2026-01-26T11:01:29.930Z","pid":16212,"hostname":"03RNBC-8C20DL3","msg":"Listening on 127.0.0.1:53034"}
+(node:16212) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2026-01-26T11:01:30.026Z","pid":16212,"hostname":"03RNBC-8C20DL3","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-01-26T11:01:30.371Z","pid":16212,"hostname":"03RNBC-8C20DL3","msg":"Adding browser to stack: chromium, version: 140.0.7339.16"}
+{"level":30,"time":"2026-01-26T11:01:30.372Z","pid":16212,"hostname":"03RNBC-8C20DL3","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-01-26T11:01:30.372Z","pid":16212,"hostname":"03RNBC-8C20DL3","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-01-26T11:01:30.391Z","pid":16212,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-26T11:01:30.391Z","pid":16212,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-26T11:01:30.401Z","pid":16212,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-26T11:01:30.401Z","pid":16212,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-26T11:01:32.472Z","pid":16212,"hostname":"03RNBC-8C20DL3","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-01-26T11:01:32.716Z","pid":16212,"hostname":"03RNBC-8C20DL3","msg":"End of node method closeAllBrowsers"}

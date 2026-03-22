@@ -55,7 +55,8 @@ for i, test in enumerate(test_data, start=1):
     doc.add_paragraph("")  # sp
 
 
-pass_count = sum(1 for test in test_data if test['status'] == 'PASS')
+pass_count = sum(1 for test in
+                 test_data if test['status'] == 'PASS')
 fail_count = sum(1 for test in test_data if test['status'] == 'FAIL')
 
 # Labels and data

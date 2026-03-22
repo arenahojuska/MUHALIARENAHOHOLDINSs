@@ -1,0 +1,58 @@
+{"level":30,"time":"2026-01-28T09:45:44.275Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"Listening on 127.0.0.1:63631"}
+(node:4780) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2026-01-28T09:45:44.667Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-01-28T09:45:45.639Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"Adding browser to stack: chromium, version: 140.0.7339.16"}
+{"level":30,"time":"2026-01-28T09:45:45.641Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-01-28T09:45:45.641Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-01-28T09:45:45.657Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"Start of node method newContext"}
+{"level":30,"time":"2026-01-28T09:45:45.658Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":720,\"width\":1280}}"}
+{"level":30,"time":"2026-01-28T09:45:45.658Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@8f6c74b7008e923eb92b35573426badb\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=ea8fd29a-e6bb-4e89-914c-8a24e1ef742a\"}"}
+{"level":30,"time":"2026-01-28T09:45:45.658Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"Trace file: "}
+{"level":30,"time":"2026-01-28T09:45:45.685Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"Setting default timeout for context context=2816e6cd-1b32-4a4d-a6b6-27b720009f33 to 10000"}
+{"level":30,"time":"2026-01-28T09:45:45.685Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"End of node method newContext"}
+{"level":30,"time":"2026-01-28T09:45:45.685Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"Changed active context: context=2816e6cd-1b32-4a4d-a6b6-27b720009f33"}
+{"level":30,"time":"2026-01-28T09:45:45.696Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-01-28T09:45:45.697Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@8f6c74b7008e923eb92b35573426badb\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=2816e6cd-1b32-4a4d-a6b6-27b720009f33\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@3c5df97bce80bb765299928cbb1388b5\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":720,\"width\":1280}},\"traceFile\":\"\"}],\"id\":\"browser=ea8fd29a-e6bb-4e89-914c-8a24e1ef742a\"}"}
+{"level":30,"time":"2026-01-28T09:45:46.256Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"Video path: undefined"}
+{"level":30,"time":"2026-01-28T09:45:46.256Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"Changed active page"}
+{"level":30,"time":"2026-01-28T09:45:46.291Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"End of node method newPage"}
+{"level":30,"time":"2026-01-28T09:45:46.305Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"Start of node method setViewportSize"}
+{"level":30,"time":"2026-01-28T09:45:46.332Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"End of node method setViewportSize"}
+{"level":30,"time":"2026-01-28T09:45:46.345Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"Start of node method goTo"}
+{"level":30,"time":"2026-01-28T09:46:11.152Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"End of node method goTo"}
+{"level":30,"time":"2026-01-28T09:46:11.219Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2026-01-28T09:46:11.236Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"Removed page=a62fccf5-8047-405c-b570-28bb73e4dc65 from context=2816e6cd-1b32-4a4d-a6b6-27b720009f33 page stack"}
+{"level":30,"time":"2026-01-28T09:46:11.614Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:12227:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13124:59)
+    at PlaywrightServer.setTimeout (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13372:57)
+    at Object.onReceiveHalfClose (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2026-01-28T09:46:11.621Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-28T09:46:11.622Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:12227:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13124:59)
+    at PlaywrightServer.setTimeout (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13372:57)
+    at Object.onReceiveHalfClose (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2026-01-28T09:46:11.629Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-28T09:46:11.629Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-28T09:46:14.845Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-01-28T09:46:14.846Z","pid":4780,"hostname":"03RNBC-8C20DL3","msg":"End of node method closeAllBrowsers"}

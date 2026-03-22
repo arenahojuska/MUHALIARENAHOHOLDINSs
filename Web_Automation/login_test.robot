@@ -18,7 +18,7 @@ ${EVIDENCE ROOT}    Web_Automation/Test_Evidence
 
 
 
-*** Keywords ***
+*** Test Cases ***
 Valid LogintEST
     ${count}=    Load Credentials    ${EXCEL PATH}
     ${sum}=      Add Two Numbers      ${count}    2

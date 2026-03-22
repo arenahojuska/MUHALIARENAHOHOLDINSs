@@ -1,0 +1,59 @@
+{"level":30,"time":"2026-01-28T09:02:30.556Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Listening on 127.0.0.1:62546"}
+(node:24344) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2026-01-28T09:02:31.181Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-01-28T09:02:31.988Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Adding browser to stack: chromium, version: 140.0.7339.16"}
+{"level":30,"time":"2026-01-28T09:02:31.989Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-01-28T09:02:31.989Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-01-28T09:02:32.000Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Start of node method newContext"}
+{"level":30,"time":"2026-01-28T09:02:32.000Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2026-01-28T09:02:32.001Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@a18a912ab0acf59a13f264236ab2184b\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=c7c79d77-a15f-4421-ad46-b51c51310ac9\"}"}
+{"level":30,"time":"2026-01-28T09:02:32.001Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Trace file: "}
+{"level":30,"time":"2026-01-28T09:02:32.037Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Setting default timeout for context context=fe34b6b0-437e-42b0-83b6-aa0b90163901 to 10000"}
+{"level":30,"time":"2026-01-28T09:02:32.038Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"End of node method newContext"}
+{"level":30,"time":"2026-01-28T09:02:32.038Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Changed active context: context=fe34b6b0-437e-42b0-83b6-aa0b90163901"}
+{"level":30,"time":"2026-01-28T09:02:32.049Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-01-28T09:02:32.049Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@a18a912ab0acf59a13f264236ab2184b\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=fe34b6b0-437e-42b0-83b6-aa0b90163901\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@7411d84135ba1d1bb3fca966c33988bb\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=c7c79d77-a15f-4421-ad46-b51c51310ac9\"}"}
+{"level":30,"time":"2026-01-28T09:02:32.557Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Video path: undefined"}
+{"level":30,"time":"2026-01-28T09:02:32.557Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Changed active page"}
+{"level":30,"time":"2026-01-28T09:02:42.583Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Error of node method  newPage"}
+================= Original suppressed error =================
+page.goto: Timeout 10000ms exceeded.
+Call log:
+[2m  - navigating to "https://www.saucedemo.com/", waiting until "load"[22m
+
+    at newPage (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:12572:18)
+    at async PlaywrightServer.newPage (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13137:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2026-01-28T09:02:42.596Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:10725:11)
+    at takeScreenshot (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:10769:3)
+    at PlaywrightServer.takeScreenshot (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13137:34)
+    at Object.onReceiveHalfClose (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2026-01-28T09:02:42.598Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2026-01-28T09:02:42.671Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-28T09:02:42.672Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-28T09:02:42.678Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-28T09:02:42.678Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-28T09:02:42.683Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-28T09:02:42.685Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-28T09:02:42.693Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-28T09:02:42.693Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-28T09:02:42.698Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Changed active context: context=fe34b6b0-437e-42b0-83b6-aa0b90163901"}
+{"level":30,"time":"2026-01-28T09:02:42.704Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Start of node method closeContext"}
+{"level":30,"time":"2026-01-28T09:02:42.721Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"End of node method closeContext"}
+{"level":30,"time":"2026-01-28T09:02:42.735Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-28T09:02:42.735Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-28T09:02:44.867Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-01-28T09:02:46.424Z","pid":24344,"hostname":"03RNBC-8C20DL3","msg":"End of node method closeAllBrowsers"}

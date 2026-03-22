@@ -1,0 +1,123 @@
+{"level":30,"time":"2026-01-31T07:40:08.382Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Listening on 127.0.0.1:56043"}
+(node:39772) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2026-01-31T07:40:09.169Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-01-31T07:40:10.259Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Adding browser to stack: chromium, version: 140.0.7339.16"}
+{"level":30,"time":"2026-01-31T07:40:10.261Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-01-31T07:40:10.260Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-01-31T07:40:10.278Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method newContext"}
+{"level":30,"time":"2026-01-31T07:40:10.279Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1300,\"width\":1920}}"}
+{"level":30,"time":"2026-01-31T07:40:10.279Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0107f6aaa7ecd11716251d7716f68dfe\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=201d0152-fb95-4734-800f-61c8e22f96d5\"}"}
+{"level":30,"time":"2026-01-31T07:40:10.279Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Trace file: "}
+{"level":30,"time":"2026-01-31T07:40:10.338Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Setting default timeout for context context=f364ddbc-df91-449e-ae4c-9d030bce11c3 to 60000"}
+{"level":30,"time":"2026-01-31T07:40:10.338Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method newContext"}
+{"level":30,"time":"2026-01-31T07:40:10.338Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Changed active context: context=f364ddbc-df91-449e-ae4c-9d030bce11c3"}
+{"level":30,"time":"2026-01-31T07:40:10.351Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-01-31T07:40:10.351Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0107f6aaa7ecd11716251d7716f68dfe\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=f364ddbc-df91-449e-ae4c-9d030bce11c3\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@5c67192f947575c2d01bd27ee0063172\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1300,\"width\":1920}},\"traceFile\":\"\"}],\"id\":\"browser=201d0152-fb95-4734-800f-61c8e22f96d5\"}"}
+{"level":30,"time":"2026-01-31T07:40:10.960Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Video path: undefined"}
+{"level":30,"time":"2026-01-31T07:40:10.961Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Changed active page"}
+{"level":30,"time":"2026-01-31T07:40:35.698Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method newPage"}
+{"level":30,"time":"2026-01-31T07:40:35.711Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2026-01-31T07:40:35.711Z","pid":39772,"hostname":"03RNBC-8C20DL3","Take screenshot with options: ":{"path":"C:\\Users\\arenaho.muhali\\PycharmProjects\\MUHALI_ARENAHO_HOLDINGS\\log\\browser\\screenshot\\robotframework-browser-screenshot-3.png","fileType":"png","fullPage":false,"timeout":60000,"omitBackground":false}}
+{"level":30,"time":"2026-01-31T07:40:36.331Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2026-01-31T07:40:36.392Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2026-01-31T07:40:36.393Z","pid":39772,"hostname":"03RNBC-8C20DL3","Take screenshot with options: ":{"path":"C:\\Users\\arenaho.muhali\\PycharmProjects\\MUHALI_ARENAHO_HOLDINGS\\log\\browser\\screenshot\\robotframework-browser-screenshot-5.png","fileType":"png","fullPage":false,"timeout":60000,"omitBackground":false}}
+{"level":30,"time":"2026-01-31T07:40:36.692Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2026-01-31T07:40:36.736Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-01-31T07:40:36.737Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Strict mode is enabled, find Locator with id=email in page."}
+{"level":30,"time":"2026-01-31T07:40:36.767Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-01-31T07:40:36.780Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2026-01-31T07:40:36.781Z","pid":39772,"hostname":"03RNBC-8C20DL3","Take screenshot with options: ":{"path":"C:\\Users\\arenaho.muhali\\PycharmProjects\\MUHALI_ARENAHO_HOLDINGS\\log\\browser\\screenshot\\robotframework-browser-screenshot-6.png","fileType":"png","fullPage":false,"timeout":60000,"omitBackground":false}}
+{"level":30,"time":"2026-01-31T07:40:37.066Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2026-01-31T07:40:37.112Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-01-31T07:40:37.112Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Strict mode is enabled, find Locator with id=email in page."}
+{"level":30,"time":"2026-01-31T07:40:37.139Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method fillText"}
+{"level":30,"time":"2026-01-31T07:40:37.149Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-01-31T07:40:37.150Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Strict mode is enabled, find Locator with id=password in page."}
+{"level":30,"time":"2026-01-31T07:40:37.159Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-01-31T07:40:37.168Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2026-01-31T07:40:37.168Z","pid":39772,"hostname":"03RNBC-8C20DL3","Take screenshot with options: ":{"path":"C:\\Users\\arenaho.muhali\\PycharmProjects\\MUHALI_ARENAHO_HOLDINGS\\log\\browser\\screenshot\\robotframework-browser-screenshot-7.png","fileType":"png","fullPage":false,"timeout":60000,"omitBackground":false}}
+{"level":30,"time":"2026-01-31T07:40:37.461Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2026-01-31T07:40:37.508Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-01-31T07:40:37.508Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Strict mode is enabled, find Locator with id=password in page."}
+{"level":30,"time":"2026-01-31T07:40:37.525Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method fillText"}
+{"level":30,"time":"2026-01-31T07:40:37.533Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-01-31T07:40:37.534Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Strict mode is enabled, find Locator with xpath=//button[@type=\"submit\"] in page."}
+{"level":30,"time":"2026-01-31T07:40:37.541Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-01-31T07:40:37.550Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2026-01-31T07:40:37.550Z","pid":39772,"hostname":"03RNBC-8C20DL3","Take screenshot with options: ":{"path":"C:\\Users\\arenaho.muhali\\PycharmProjects\\MUHALI_ARENAHO_HOLDINGS\\log\\browser\\screenshot\\robotframework-browser-screenshot-8.png","fileType":"png","fullPage":false,"timeout":60000,"omitBackground":false}}
+{"level":30,"time":"2026-01-31T07:40:37.850Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2026-01-31T07:40:37.895Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method click"}
+{"level":30,"time":"2026-01-31T07:40:37.895Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Strict mode is enabled, find Locator with xpath=//button[@type=\"submit\"] in page."}
+{"level":30,"time":"2026-01-31T07:40:37.949Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method click"}
+{"level":30,"time":"2026-01-31T07:40:37.956Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-01-31T07:40:37.956Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Strict mode is enabled, find Locator with text=\"Logout\" in page."}
+{"level":30,"time":"2026-01-31T07:40:39.325Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-01-31T07:40:39.341Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2026-01-31T07:40:39.341Z","pid":39772,"hostname":"03RNBC-8C20DL3","Take screenshot with options: ":{"path":"C:\\Users\\arenaho.muhali\\PycharmProjects\\MUHALI_ARENAHO_HOLDINGS\\log\\browser\\screenshot\\robotframework-browser-screenshot-10.png","fileType":"png","fullPage":false,"timeout":60000,"omitBackground":false}}
+{"level":30,"time":"2026-01-31T07:40:39.651Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2026-01-31T07:40:39.699Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2026-01-31T07:40:39.728Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Removed page=9c73beaf-333c-406e-a777-98c8ec6deb42 from context=f364ddbc-df91-449e-ae4c-9d030bce11c3 page stack"}
+{"level":30,"time":"2026-01-31T07:40:41.418Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method closeBrowser"}
+{"level":30,"time":"2026-01-31T07:40:41.427Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method click"}
+================= Original suppressed error =================
+Error: Could not find active page
+    at exists (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:10725:11)
+    at findLocator (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:10682:3)
+    at internalClick (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:11891:25)
+    at click (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:11874:24)
+    at PlaywrightServer.click (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13137:34)
+    at Object.onReceiveHalfClose (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+=============================================================
+{"level":30,"time":"2026-01-31T07:40:41.428Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Error of node method  click"}
+{"level":30,"time":"2026-01-31T07:40:41.443Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:10725:11)
+    at takeScreenshot (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:10769:3)
+    at PlaywrightServer.takeScreenshot (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13137:34)
+    at Object.onReceiveHalfClose (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2026-01-31T07:40:41.444Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Error of node method  takeScreenshot"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:12227:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13124:59)
+    at PlaywrightServer.setTimeout (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13372:57)
+    at Object.onReceiveHalfClose (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2026-01-31T07:40:41.467Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-31T07:40:41.468Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:12227:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13124:59)
+    at PlaywrightServer.setTimeout (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13372:57)
+    at Object.onReceiveHalfClose (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2026-01-31T07:40:41.480Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-31T07:40:41.480Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-31T07:40:44.716Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-01-31T07:40:44.716Z","pid":39772,"hostname":"03RNBC-8C20DL3","msg":"End of node method closeAllBrowsers"}

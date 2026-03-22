@@ -1,0 +1,41 @@
+{"level":30,"time":"2026-01-29T21:33:23.518Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Listening on 127.0.0.1:65171"}
+(node:3720) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2026-01-29T21:33:24.731Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-01-29T21:33:26.116Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Adding browser to stack: chromium, version: 140.0.7339.16"}
+{"level":30,"time":"2026-01-29T21:33:26.117Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-01-29T21:33:26.117Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-01-29T21:33:26.165Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Start of node method newContext"}
+{"level":30,"time":"2026-01-29T21:33:26.166Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":720,\"width\":1280}}"}
+{"level":30,"time":"2026-01-29T21:33:26.166Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@1173f174e841d3ba6b9d68056e904334\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=f51740f3-c4b5-4a87-8da8-d80e53140d86\"}"}
+{"level":30,"time":"2026-01-29T21:33:26.166Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Trace file: "}
+{"level":30,"time":"2026-01-29T21:33:26.319Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Setting default timeout for context context=e1c00ec6-a933-485f-82ce-d45faac43845 to 10000"}
+{"level":30,"time":"2026-01-29T21:33:26.320Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"End of node method newContext"}
+{"level":30,"time":"2026-01-29T21:33:26.319Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Changed active context: context=e1c00ec6-a933-485f-82ce-d45faac43845"}
+{"level":30,"time":"2026-01-29T21:33:26.332Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-01-29T21:33:26.332Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@1173f174e841d3ba6b9d68056e904334\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=e1c00ec6-a933-485f-82ce-d45faac43845\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@51f25e678570ad7b66ca5edf71b42f5b\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":720,\"width\":1280}},\"traceFile\":\"\"}],\"id\":\"browser=f51740f3-c4b5-4a87-8da8-d80e53140d86\"}"}
+{"level":30,"time":"2026-01-29T21:33:27.294Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Video path: undefined"}
+{"level":30,"time":"2026-01-29T21:33:27.313Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Changed active page"}
+{"level":30,"time":"2026-01-29T21:33:27.344Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"End of node method newPage"}
+{"level":30,"time":"2026-01-29T21:33:27.353Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Start of node method setViewportSize"}
+{"level":30,"time":"2026-01-29T21:33:27.376Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"End of node method setViewportSize"}
+{"level":30,"time":"2026-01-29T21:33:27.383Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Start of node method goTo"}
+{"level":30,"time":"2026-01-29T21:33:53.977Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"End of node method goTo"}
+{"level":30,"time":"2026-01-29T21:33:54.011Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-29T21:33:54.092Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-29T21:33:54.096Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-29T21:33:54.100Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-29T21:33:54.103Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-29T21:33:54.106Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-29T21:33:54.111Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-29T21:33:54.114Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-29T21:33:54.117Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Changed active context: context=e1c00ec6-a933-485f-82ce-d45faac43845"}
+{"level":30,"time":"2026-01-29T21:33:54.117Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Changing current active page: page=27e82adf-871f-464f-b4f0-c67276918577"}
+{"level":30,"time":"2026-01-29T21:33:54.117Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Changed active page"}
+{"level":30,"time":"2026-01-29T21:33:54.135Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Start of node method closeContext"}
+{"level":30,"time":"2026-01-29T21:33:54.193Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Removed page=a6f48e56-94f3-45aa-9d0b-aaf7cf0747f6 from context=e1c00ec6-a933-485f-82ce-d45faac43845 page stack"}
+{"level":30,"time":"2026-01-29T21:33:54.267Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"End of node method closeContext"}
+{"level":30,"time":"2026-01-29T21:33:54.286Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-29T21:33:54.286Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-29T21:33:57.747Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-01-29T21:33:58.178Z","pid":3720,"hostname":"03RNBC-8C20DL3","msg":"End of node method closeAllBrowsers"}

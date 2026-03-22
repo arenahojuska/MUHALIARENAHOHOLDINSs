@@ -1,15 +1,9 @@
 import os
 from docx import Document
 
-# Target folder (unchanged)
-target_dir = r"C:\Users\arenaho.muhali\OneDrive - MultiChoice\Documents\Multichoice AJ\STS ANGOLA\Test Results\Renew STS Customers"
+# Target folder
+target_dir = r"C:\Users\arenaho.muhali\OneDrive - MultiChoice\Documents\Multichoice AJ\STS ANGOLA\Test Results\Akhil"
 os.makedirs(target_dir, exist_ok=True)
-
-# Python list with your full set of test cases
-# Python list of the 24 STS activation test cases
-# Python list of subscription upgrade test cases
-# Python list of STS cross-activation test cases
-
 
 
 
@@ -18,7 +12,17 @@ os.makedirs(target_dir, exist_ok=True)
 
 
 tests = [
-    "TS077_TC02	Verify  Renew STS Family Mais Customer",
+
+
+    "FSS TSM Zambia",
+    "FSS TSM Ethiopia",
+    "FSS TSM Ghana",
+    "FSS TSM Kenya",
+    "FSS TSM Uganda",
+    "FSS TSM Mozambique",
+    "FSS TSM Angola"
+
+
 
 ]
 
@@ -28,15 +32,19 @@ tests = [
 
 
 
+
+
+
+
 for test in tests:
-    # Create document
     doc = Document()
-    doc.add_heading(test, level=1)  # heading with test name
+    doc.add_heading(test, level=1)
 
-
-    # Save as Word doc
-    filename = f"{test}.docx"
+    # Sanitize filename
+    safe_filename = test.replace('\t', ' ').replace(':', '').replace('|', '').replace('/', '-')
+    filename = f"{safe_filename}.docx"
     filepath = os.path.join(target_dir, filename)
+
     doc.save(filepath)
 
 print("✅ Word documents created successfully in:")

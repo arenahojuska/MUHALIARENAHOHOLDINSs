@@ -1,51 +1,87 @@
 *** Settings ***
-Library    SeleniumLibrary
-Library    AdderLibrary.py
-Library    OperatingSystem
-Library    String
-Library    BuiltIn
-Library    DateTime
-Library    Process
 
+Library    screenshot.py
+Variables  C:/Users/arenaho.muhali/PycharmProjects/MUHALI_ARENAHO_HOLDINGS/Web Playwright/Test Cases/testdata.py
+Library    Browser    enable_auto_screenshot=${False}
 
-Suite Setup    Setup Evidence Folder
+*** Test Cases ***
+Login Validation With IF ELSE And Screenshots
+    # ------------------ BROWSER SETUP ------------------
+    New Browser    chromium    headless=False
+    New Context    viewport={'width': 1920, 'height': 1300}
+    New Page    ${BASE_URL}    wait_until=domcontentloaded
 
-*** Variables ***
-${EXCEL PATH}        C:/Users/arenaho.muhali/PycharmProjects/MUHALI_ARENAHO_HOLDINGS/Web_Automation/Book11.xlsx
-${SHEET NAME}        Sheet1
-${BROWSER}           edge
-${URL}               https://www.saucedemo.com/v1/
-${EVIDENCE ROOT}     Web_Automation/Test_Evidence
+    # Use the prefix 'screenshot.' to call YOUR Python function
+    screenshot.Take Screenshot
 
-*** Keywords ***
+    # ------------------ TITLE VALIDATION ------------------
+    ${title}=    Get Title
+    Log To Console    Page title is: ${title}
 
-Setup Evidence Folder
-    ${today}=     Get Current Date    result_format=%Y-%m-%d
-    ${folder}=    Set Variable    ${EVIDENCE ROOT}/${today}
-    Set Suite Variable    ${FOLDER}    ${folder}
-    Create Directory    ${FOLDER}
+    IF    '${title}' == '${EXPECTED_TITLE}'
+        Log To Console    ✅ Title matched
+        screenshot.Take Screenshot
+    ELSE
+        Log To Console    ❌ Title mismatch
+        screenshot.Take Screenshot
+        Fail    Title validation failed
+    END
 
-Given the user opens the login page
-    Open Browser    ${URL}    ${BROWSER}
-    Maximize Browser Window
-    Title Should Be    Swag Labs
+    # ------------------ EMAIL FIELD VALIDATION ------------------
+    ${email_visible}=    Run Keyword And Return Status
+    ...    Wait For Elements State    ${EMAIL_FIELD}    visible    timeout=10s
 
-When the user logs in with valid credentials from Excel
-    ${count}=    Load Credentials    ${EXCEL PATH}
-    ${sum}=      Add Two Numbers      ${count}    2
-    Log          Sum: ${sum}
-    ${msg}=    Load Credentials    ${EXCEL PATH}
-    Log         ${msg}
-    ${username}    ${password}=    Get Credential By Index    0
-    Log    Username: ${username}
-    Log    Password: ${password}
-    Input Text    id=user-name    ${username}
-    Input Text    id=password     ${password}
-    Click Button  id=login-button
+    IF    ${email_visible}
+        Log To Console    ✅ Email field is visible
+        screenshot.Take Screenshot
+        Fill Text    ${EMAIL_FIELD}    ${ADMIN_USER}
+    ELSE
+        Log To Console    ❌ Email field not visible
+        screenshot.Take Screenshot
+        Fail    Email field not found
+    END
 
-Then the user should be logged in and screenshot is captured
-    ${random}=    Generate Random String    8
-    ${file}=      Set Variable    ${CURDIR}/${FOLDER}/${TEST NAME}_${random}.png
-    Capture Page Screenshot    ${file}
-    Title Should Be    Swag Labs
-    Sleep    3s
+    # [Repeat this 'screenshot.' prefix for the rest of your IF/ELSE blocks]
+
+    [Teardown]    Close Browser
+
+*** Test Cases ***
+Login Validation With IF ELSE And Screenshots
+    # ------------------ BROWSER SETUP ------------------
+    New Browser    chromium    headless=False
+    New Context    viewport={'width': 1920, 'height': 1300}
+    New Page    ${BASE_URL}    wait_until=domcontentloaded
+
+    # Use the prefix 'screenshot.' to call YOUR Python function
+    screenshot.Take Screenshot
+
+    # ------------------ TITLE VALIDATION ------------------
+    ${title}=    Get Title
+    Log To Console    Page title is: ${title}
+
+    IF    '${title}' == '${EXPECTED_TITLE}'
+        Log To Console    ✅ Title matched
+        screenshot.Take Screenshot
+    ELSE
+        Log To Console    ❌ Title mismatch
+        screenshot.Take Screenshot
+        Fail    Title validation failed
+    END
+
+    # ------------------ EMAIL FIELD VALIDATION ------------------
+    ${email_visible}=    Run Keyword And Return Status
+    ...    Wait For Elements State    ${EMAIL_FIELD}    visible    timeout=10s
+
+    IF    ${email_visible}
+        Log To Console    ✅ Email field is visible
+        screenshot.Take Screenshot
+        Fill Text    ${EMAIL_FIELD}    ${ADMIN_USER}
+    ELSE
+        Log To Console    ❌ Email field not visible
+        screenshot.Take Screenshot
+        Fail    Email field not found
+    END
+
+    # [Repeat this 'screenshot.' prefix for the rest of your IF/ELSE blocks]
+
+    [Teardown]    Close Browser
