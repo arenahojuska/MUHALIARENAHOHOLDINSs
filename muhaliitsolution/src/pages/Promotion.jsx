@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import {
   Check,
   Globe,
@@ -94,7 +96,7 @@ const Promotion = () => {
       icon: TrendingUp,
       title: "Affordable Pricing",
       description:
-        "Get a professional online store for just R2700 - unbeatable value for quality web design.",
+        "Get a professional online store for just R700 - unbeatable value for quality web design.",
     },
     {
       icon: Zap,
@@ -145,7 +147,7 @@ const Promotion = () => {
         </Badge>
         <h1 className="text-5xl font-bold mt-6">
           Affordable Online Store Website{" "}
-          <span className="block text-blue-600">Only R2700</span>
+          <span className="block text-blue-600">From Only R700</span>
         </h1>
         <p className="text-xl mt-4 max-w-2xl mx-auto">
           Fast setup in 7–14 days. Everything you need to start selling online.
@@ -154,9 +156,7 @@ const Promotion = () => {
           <Button size="lg" onClick={scrollToContact}>
             Get Your Business Online Today!
           </Button>
-          <Button size="lg" variant="outline">
-            View Package Details
-          </Button>
+          
         </div>
       </section>
 
@@ -198,7 +198,7 @@ const Promotion = () => {
       <section className="py-20 px-4 max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-10">
           Bring Your Brand to Life with{" "}
-          <span className="text-blue-600">Creative Design Solution</span>
+          <span className="text-blue-600">Muhali Software Solution</span>
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {whyChooseUs.map(({ icon: Icon, title, description }, i) => (
@@ -239,9 +239,11 @@ const Promotion = () => {
           <CardContent className="p-12">
             <h2 className="text-3xl font-bold mb-4">Ready to Launch Your Online Store?</h2>
             <p className="text-gray-600 mb-8">
-              Join hundreds of successful businesses that trust Creative Design Solution
+              Join hundreds of successful businesses that trust Muhali Software Solution
             </p>
+            <Link to="/contact">
             <Button size="lg">Get Started Now</Button>
+            </Link>
             <p className="text-sm text-gray-500 mt-6">
               50% deposit required to begin • Full support included
             </p>
@@ -251,19 +253,13 @@ const Promotion = () => {
 
       {/* Footer */}
       <footer className="bg-blue-900 text-white py-12 text-center">
-        <h3 className="text-2xl font-bold mb-4">Creative Design Solution</h3>
+        <h3 className="text-2xl font-bold mb-4">Muhali Software Solution</h3>
         <p className="max-w-2xl mx-auto text-blue-100">
           A full-service creative agency helping businesses succeed online through innovative web
           design, digital marketing, and strategic brand development.
         </p>
-        <div className="flex justify-center gap-6 mt-6">
-          <Facebook className="w-6 h-6 cursor-pointer hover:text-blue-400" />
-          <Instagram className="w-6 h-6 cursor-pointer hover:text-pink-400" />
-          <Youtube className="w-6 h-6 cursor-pointer hover:text-red-500" />
-        </div>
-        <p className="text-blue-300 mt-6 text-sm">
-          © {new Date().getFullYear()} Creative Design Solution. All rights reserved.
-        </p>
+       
+       
       </footer>
     </div>
   );

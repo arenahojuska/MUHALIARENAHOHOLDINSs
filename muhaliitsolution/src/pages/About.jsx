@@ -11,15 +11,17 @@ import {
   Lightbulb,
   Heart
 } from 'lucide-react';
+import { Link } from "react-router-dom";
+
 
 function About() {
   const teamMembers = [
-    { name: 'Alex Rivera', role: 'Creative Director', image: '👨‍💼' },
-    { name: 'Sarah Chen', role: 'Lead Developer', image: '👩‍💻' },
-    { name: 'Marcus Johnson', role: 'Marketing Lead', image: '👨‍💼' },
+    { name: 'Muhali Juska', role: 'Creative Director', image: '👨‍💼' },
+    { name: 'Sipho Dlamini', role: 'Lead Developer', image: '👩‍💻' },
+    { name: 'Kabelo Molefe', role: 'Marketing Lead', image: '👨‍💼' },
     { name: 'Emma Thompson', role: 'UX/UI Designer', image: '👩‍🎨' },
-    { name: 'David Kim', role: 'SEO Specialist', image: '👨‍💼' },
-    { name: 'Lisa Anderson', role: 'Project Manager', image: '👩‍💼' }
+    { name: 'Naledi Khumalo', role: 'SEO Specialist', image: '👨‍💼' },
+    { name: 'Annelise van der Merwe', role: 'Project Manager', image: '👩‍💼' }
   ];
 
   const values = [
@@ -86,7 +88,7 @@ function About() {
             About <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Us</span>
           </h1>
           <p className="text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            At Creative Design Solution, we are passionate about helping businesses succeed in the digital landscape.
+            At Muhali Solution, we are passionate about helping businesses succeed in the digital landscape.
           </p>
         </div>
       </section>
@@ -99,7 +101,7 @@ function About() {
                 Your Partner in <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Digital Excellence</span>
               </h2>
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                Founded with a vision to bridge the gap between creativity and technology, we specialize in delivering high-quality digital experiences that drive results.
+                Muhali IT Solution is a 100% black owned company dedicated to empowering creatives, entrepreneurs by helping with website and application Design. We specialize in bringing ideas to life through publishing, design, and business consulting of website.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
                 Our team of dedicated professionals combines expertise in web design, digital marketing, branding, and more to create impactful solutions that enhance your online presence.
@@ -317,10 +319,12 @@ function About() {
           <p className="text-xl md:text-2xl mb-12 text-gray-300 leading-relaxed max-w-3xl mx-auto">
             Discover how Creative Design Solution can transform your online experience and help your business thrive in the digital world.
           </p>
+          <Link to="/contact">
           <button className="group inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-10 py-5 rounded-xl text-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/50 hover:scale-105">
             Start Your Journey
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </button>
+          </Link>
         </div>
       </section>
     </main>

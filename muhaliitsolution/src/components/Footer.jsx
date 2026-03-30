@@ -1,6 +1,6 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
-
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, ArrowRight } from 'lucide-react';
+import { FaWhatsapp } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-gray-900 via-gray-900 to-black text-white relative overflow-hidden">
@@ -11,30 +11,19 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="lg:col-span-1">
             <div className="inline-flex items-center gap-2 mb-6">
+              {/* WhatsApp Icon */}
+
+
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center font-bold text-white">
                 MS
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Muhaliit</span>
+              <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Muhali Software Solutions</span>
             </div>
             <p className="text-gray-400 leading-relaxed mb-6">
               Your one-stop shop for premium products. Fast delivery and excellent support guaranteed.
             </p>
             <div className="flex gap-4">
-              {[
-                { icon: Facebook, label: 'Facebook' },
-                { icon: Twitter, label: 'Twitter' },
-                { icon: Linkedin, label: 'LinkedIn' },
-                { icon: Instagram, label: 'Instagram' }
-              ].map((social, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="w-10 h-10 rounded-lg bg-white/10 hover:bg-gradient-to-br hover:from-blue-500 hover:to-cyan-500 flex items-center justify-center transition-all duration-300 group"
-                  title={social.label}
-                >
-                  <social.icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                </a>
-              ))}
+         
             </div>
           </div>
 
@@ -43,39 +32,30 @@ const Footer = () => {
               <div className="w-1 h-6 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full"></div>
               Quick Links
             </h3>
-            <ul className="space-y-3">
-              {[
-                { label: 'Home', href: '/' },
-                { label: 'Shop', href: '/shop' },
-                { label: 'About', href: '/about' },
-                { label: 'Contact', href: '/contact' }
-              ].map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-all duration-300 group"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                    {link.label}
-                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
-                  </a>
-                </li>
-              ))}
-            </ul>
+           <ul className="space-y-3">
+  {[
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/About" },
+    { name: "Services", path: "/Services" },
+    { name: "Promotion", path: "/Promotion" },
+    { name: "Contact Us", path: "/Contact" },
+  ].map((link, index) => (
+    <li key={index}>
+      <a
+        href={link.path}
+        className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-all duration-300 group"
+      >
+        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+        {link.name}
+        <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
+      </a>
+    </li>
+  ))}
+</ul>
+
           </div>
 
-          <div>
-            <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
-              <div className="w-1 h-6 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full"></div>
-              Support
-            </h3>
-            <ul className="space-y-3 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors duration-300">FAQ</a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300">Shipping Info</a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300">Returns</a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300">Track Order</a></li>
-            </ul>
-          </div>
+         
 
           <div>
             <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
@@ -95,7 +75,7 @@ const Footer = () => {
                 className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors duration-300 group"
               >
                 <Phone className="w-5 h-5 mt-0.5 group-hover:scale-110 transition-transform duration-300 text-blue-500" />
-                <span className="text-sm">+27 123 456 789</span>
+                <span className="text-sm">+27729792961</span>
               </a>
               <div className="flex items-start gap-3 text-gray-400">
                 <MapPin className="w-5 h-5 mt-0.5 text-blue-500" />

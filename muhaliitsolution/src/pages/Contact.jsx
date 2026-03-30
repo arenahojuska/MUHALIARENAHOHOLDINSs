@@ -167,7 +167,7 @@ const Contact = () => {
                 info@creativedesignsolution.co.za
               </a><br />
               <a href="mailto:admin@creativedesignsolution.co.za" className="text-blue-600 hover:underline">
-                admin@creativedesignsolution.co.za
+                arenahojuska@gmail.com
               </a>
             </p>
           </div>
@@ -176,10 +176,10 @@ const Contact = () => {
             <h3 className="text-xl font-semibold mb-3">Call Us</h3>
             <p className="text-gray-600">
               <a href="tel:+27729792961" className="text-blue-600 hover:underline">
-                Phone: +27 68 515 3028
+                Phone: +27 72 979 2961
               </a><br />
               <a href="https://wa.me/27729792961" className="text-blue-600 hover:underline">
-                WhatsApp: +27 74 407 8500
+                WhatsApp: +27 72 979 2961
               </a>
             </p>
           </div>
