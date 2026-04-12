@@ -5,7 +5,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 7.3.1 (Python 3.13.5 on win32)" name="Generator">
+<meta content="Robot Framework 7.4.2 (Python 3.13.5 on win32)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
 <style media="all">
 :root {
@@ -116,15 +116,16 @@ select {
 #header {
     width: 65em;
     height: 3em;
-    margin: 20px 0 6px 0;
+    margin: 1em 0 0 0;
 }
 h1 {
     float: left;
-    margin: 0 0 0.5em 0;
+    margin: 0 0 1em 0;
     width: 75%;
 }
 h2 {
     clear: left;
+    margin: 1.5em 0 0.5em 0;
 }
 #generated {
     float: right;
@@ -168,7 +169,13 @@ h2 {
     background-color: var(--primary-color);
     border-radius: 3px;
 }
-.label.debug, .label.trace, .label.error, .label.keyword {
+/* https://stackoverflow.com/questions/75238633 */
+@supports (-moz-appearance: none) {
+    .label {
+        padding-top: 4px;
+    }
+}
+.label.debug, .label.trace, .label.error {
     letter-spacing: 0;
 }
 .label.pass, .label.fail, .label.error, .label.skip, .label.warn {
@@ -355,19 +362,6 @@ th.stats-col-graph:hover {
 [data-theme="light"] .dark-mode-icon {
     display: block;
 }
-@keyframes highlight {
-    0% {
-        background: var(--primary-color)
-    }
-    100% {
-        background: var(--target-color);
-    }
-}
-:target {
-    background: var(--target-color);
-    transition: background 0.3s;
-    animation: highlight 4s;
-}
 </style>
 <style media="all">
 /* Icons are from Open Iconic <https://useiconic.com/open/>.
@@ -384,36 +378,43 @@ th.stats-col-graph:hover {
     --elapsed-color: #999;
 }
 /* Containers */
-.suite, .test, #errors {
+.suite, .test, #errors, #errors .messages {
     border-color: #ccc; /* Fallback value */
     border-color: var(--secondary-color);
     border-width: 1px;
     border-style: solid;
-    padding: 0.3em 0.2em;
-    margin: 0.2em 0;
+    padding: 5px;
+    margin-top: 5px;
 }
 .test {
     border-style: dashed;
 }
-#errors, .messages {
+.messages {
     width: 100%;
     border-spacing: 0;
+    padding: 0 5px;
 }
 .children {
     display: none;
-    margin-left: 1.4em;
+    margin-left: 18px;
+    margin-top: 2px;
 }
-.suite, .test, .keyword {
-    margin-left: -0.2em;
+#errors .children {
+    margin-left: 22px;
 }
-#s1, .suite > .children > .keyword {
-    margin-left: 0;
+.suite, .test {
+    margin-left: -5px;
+}
+#s1, #errors {
+    margin: 0;
 }
 /* Suite, test and kw headers */
 .element-header {
+    display: flex;
+    align-items: center;
+    padding: 2px;
     border: 1px solid transparent;
     border-radius: 2px;
-    position: relative;
 }
 .element-header:hover {
     cursor: pointer;
@@ -423,17 +424,15 @@ th.stats-col-graph:hover {
     border-color: var(--secondary-color);
 }
 .element-header-toggle {
-    position: absolute;
-    left: 3px;
-    top: 5px;
+    margin: 0 4px 0 2px;
+    height: 11px;
+    width: 11px;
+    min-width: 11px;
+    background-size: 6px 6px;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeCR0JChSkZz20AAAAGklEQVQI12NgQAKMDKzInP8IDhOqMk4G7AAANQwBE427PYUAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0wIDB2Mmg4di0yaC04eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAzKSIgLz4KPC9zdmc+), none;
     filter: var(--icon-filter);
-    height: 10px;
-    width: 10px;
-    background-size: 6px 6px;
     border-color: #ccc; /* Fallback value */
     border-color: var(--icon-highlight);
     border-width: 1px;
@@ -441,67 +440,59 @@ th.stats-col-graph:hover {
     border-radius: 2px;
 }
 .closed > .element-header-toggle {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeCR0JCDHdVYtxAAAAM0lEQVQI103MMQqAMBQFwVHyITaB3P+W1sKzSBC3mW6hRFw0pUB5DvF1bu9FN0RM3X/wAk98CUnvFTakAAAAAElFTkSuQmCC);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0zIDB2M2gtM3YyaDN2M2gydi0zaDN2LTJoLTN2LTNoLTJ6IiAvPgo8L3N2Zz4=), none;
 }
 .element-header:hover > .element-header-toggle {
     background-color: #ccc; /* Fallback value */
     background-color: var(--icon-highlight);
 }
-.element-header-right:hover ~ .element-header-toggle {
+.element-header-menu:hover ~ .element-header-toggle {
     background-color: transparent;
 }
-.element-header-left {
-    padding: 3px 80px 3px 20px;
-}
-.element-header-right {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 3px;
+.element-header-menu {
+    margin: 0 2px 0 4px;
     cursor: default;
 }
-.element-header .label {
-    margin-right: 0.5em;
+.name, .arg, .assign {
+    margin-left: 7px;
+    white-space: pre-wrap;
 }
 .name {
     font-weight: bold;
-    white-space: pre-wrap;
-}
-.arg, .assign {
-    white-space: pre-wrap;
 }
 .elapsed {
-    float: right;
+    margin-left: auto;
+    padding-left: 0.5em;
     color: #666; /* Fallback value */
     color: var(--elapsed-color);
-    padding-left: 1em;
+    font-size: 0.9em;
+}
+/* https://stackoverflow.com/questions/75238633 */
+@supports (-moz-appearance: none) {
+    .name, .arg, .assign, .elapsed {
+        padding-top: 3px;
+    }
 }
 .link {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAHlJREFUGJVtzrEJwmAQBtCn6ASuIKTIBhY2gmghBiJYB1udwk10B8FJbKMBcQFbtbkfJHrVwfu+4/idJR64Y9H7E3higj5O3S8Y44ApLnjhnXCNGhV2yNGggDJwiC02gavUbpDFvscRo4QdXOMKDHBufz3HLYKzNn4AbSkV3fncGQYAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik01Ljg4LjAzYy0uMTguMDEtLjM2LjAzLS41My4wOS0uMjcuMS0uNTMuMjUtLjc1LjQ3YS41LjUgMCAxIDAgLjY5LjY5Yy4xMS0uMTEuMjQtLjE3LjM4LS4yMi4zNS0uMTIuNzgtLjA3IDEuMDYuMjIuMzkuMzkuMzkgMS4wNCAwIDEuNDRsLTEuNSAxLjVjLS40NC40NC0uOC40OC0xLjA2LjQ3LS4yNi0uMDEtLjQxLS4xMy0uNDEtLjEzYS41LjUgMCAxIDAtLjUuODhzLjM0LjIyLjg0LjI1Yy41LjAzIDEuMi0uMTYgMS44MS0uNzhsMS41LTEuNWMuNzgtLjc4Ljc4LTIuMDQgMC0yLjgxLS4yOC0uMjgtLjYxLS40NS0uOTctLjUzLS4xOC0uMDQtLjM4LS4wNC0uNTYtLjAzem0tMiAyLjMxYy0uNS0uMDItMS4xOS4xNS0xLjc4Ljc1bC0xLjUgMS41Yy0uNzguNzgtLjc4IDIuMDQgMCAyLjgxLjU2LjU2IDEuMzYuNzIgMi4wNi40Ny4yNy0uMS41My0uMjUuNzUtLjQ3YS41LjUgMCAxIDAtLjY5LS42OWMtLjExLjExLS4yNC4xNy0uMzguMjItLjM1LjEyLS43OC4wNy0xLjA2LS4yMi0uMzktLjM5LS4zOS0xLjA0IDAtMS40NGwxLjUtMS41Yy40LS40Ljc1LS40NSAxLjAzLS40NC4yOC4wMS40Ny4wOS40Ny4wOWEuNS41IDAgMSAwIC40NC0uODhzLS4zNC0uMi0uODQtLjIyeiIKICAvPgo8L3N2Zz4=), none;
-    filter: var(--icon-filter);
 }
 .expand {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUGJVjYCACKDAwMByA0ljFDjAwMPxnYGB4ABVQgLL/Q+VQBB6gseGmIivCkERXhFUSWRFOSawAAEl7E3uv1iMcAAAAAElFTkSuQmCC);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0xLjUgMGwtMS41IDEuNSA0IDQgNC00LTEuNS0xLjUtMi41IDIuNS0yLjUtMi41eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAxKSIgLz4KPC9zdmc+), none;
-    filter: var(--icon-filter);
 }
 .collapse {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAC5JREFUGJVjYCARNEAxTsn/UIyhCFkSQxG6ThQ+C5IpjWhG1yNb4YDFTdjEMAEACi8Q++9Y9TAAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik00IDBsLTQgNCAxLjUgMS41IDIuNS0yLjUgMi41IDIuNSAxLjUtMS41LTQtNHoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMSkiIC8+Cjwvc3ZnPg==), none;
-    filter: var(--icon-filter);
 }
 .expand, .collapse, .link {
     float: left;
     display: block;
     visibility: hidden;
-    margin: 0 4px;
+    margin: 0 3px;
     height: 14px;
     width: 14px;
     background-size: 8px 8px;
     background-repeat: no-repeat;
     background-position: center;
+    filter: var(--icon-filter);
     border-color: #ccc; /* Fallback value */
     border-color: var(--icon-highlight);
     border-width: 1px;
@@ -519,23 +510,18 @@ th.stats-col-graph:hover {
     background-color: var(--icon-highlight);
 }
 /* Messages and errors */
+.message-row {
+    height: 20px;
+}
 .messages .time, .messages .message {
     font-family: monospace;
     font-size: 1.1em;
 }
-#errors .message {
-    font-family: monospace;
-    font-size: 1.2em;
-}
-.message-row {
-    height: 20px;
-}
-.time {
+.messages .time {
     width: 7.5em;
 }
-.error-time {
-    width: 11em;
-    font-size: 0.9em;
+#errors .time {
+    width: 12.5em;
     white-space: nowrap;
 }
 .level {
@@ -555,7 +541,6 @@ th.stats-col-graph:hover {
     background-position: center;
 }
 .message-row:hover .select-message div {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeCR0MOzhWKZQOAAAASUlEQVQY032PsRHAIAwDX9BkicD+W8UMEqegAQJWKZ/+3sLZJhFGQEZzNaIa4ibh66En867VNaIeoP5WppNuIGoAlOm3g5VC1AdYeQv1BZPRSgAAAABJRU5ErkJggg==);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0wIDB2MWg4di0xaC04em0wIDJ2MWg2di0xaC02em0wIDJ2MWg4di0xaC04em0wIDJ2MWg2di0xaC02eiIgLz4KPC9zdmc+), none;
     filter: var(--icon-filter);
     border-color: #ccc; /* Fallback value */
@@ -577,7 +562,6 @@ th.stats-col-graph:hover {
 .debug-message {
     display: table;
 }
-/* Metadata */
 .metadata {
     width: 100%;
     border-spacing: 0.2em;
@@ -596,6 +580,20 @@ th.stats-col-graph:hover {
 /* Custom styles for statistics */
 #total-stats tr:hover, #tag-stats tr:hover {
     cursor: default;
+}
+/* Target highlight */
+@keyframes highlight {
+    0% {
+        background: var(--primary-color)
+    }
+    100% {
+        background: var(--target-color);
+    }
+}
+:target {
+    background: var(--target-color);
+    transition: background 0.3s;
+    animation: highlight 4s;
 }
 </style>
 <style media="print">
@@ -741,7 +739,8 @@ function toggleElement(elementId, childrenNames) {
     children.toggle(100, '', function () {
         element.children('.element-header').toggleClass('closed');
     });
-    populateChildren(elementId, children, childrenNames);
+    if (childrenNames)
+        populateChildren(elementId, children, childrenNames);
 }
 function populateChildren(elementId, childElement, childrenNames) {
     if (!childElement.hasClass('populated')) {
@@ -1144,7 +1143,7 @@ window.model = (function () {
         kw.type = data.type;
         kw.template = 'keywordTemplate';
         kw.arguments = data.args;
-        kw.assign = data.assign + (data.assign ? ' =  ' : '');
+        kw.assign = data.assign;
         kw.tags = data.tags;
         kw.timeout = data.timeout;
         kw.populateKeywords = createIterablePopulator('Keyword');
@@ -1883,7 +1882,7 @@ function addStatistics() {
         '<th class="stats-col-elapsed">Elapsed</th>' +
         '<th class="stats-col-graph">Pass / Fail / Skip</th>';
     var statTable =
-        '<h2>{Test} Statistics</h2>' +
+        '<h2>Statistics</h2>' +
         '<table class="statistics" id="total-stats"><thead><tr>' +
         '<th class="stats-col-name">Total Statistics</th>' + statHeaders +
         '</tr></thead></table>' +
@@ -1893,7 +1892,7 @@ function addStatistics() {
         '<table class="statistics" id="suite-stats"><thead><tr>' +
         '<th class="stats-col-name">Statistics by Suite</th>' + statHeaders +
         '</tr></thead></table>';
-    $(testOrTask(statTable)).appendTo('#statistics-container');
+    $(statTable).appendTo('#statistics-container');
     util.map(['total', 'tag', 'suite'], addStatTable);
     addTooltipsToElapsedTimes();
     enableStatisticsSorter();
@@ -2074,31 +2073,31 @@ storage = function () {
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,0,[],[0,0,51],[],[[4,0,0,[],[0,46,4,5],[[0,6,0,0,0,7,0,0,[0,48,0],[[49,5,5]]],[0,8,0,0,0,9,10,0,[3,49,0],[]],[0,11,12,0,13,14,0,0,[3,49,0],[]],[0,11,12,0,13,15,0,0,[3,49,0],[]]]]],[],[1,0,1,0]];
+window.output["suite"] = [1,2,3,0,[],[1,0,475],[[4,5,6,0,[],[1,48,425],[[7,8,9,0,[],[1,50,420],[[10,11,12,0,[],[1,52,416],[],[[13,0,14,[],[1,392,73],[[0,15,16,0,17,18,0,0,[1,393,1],[[393,2,19]]],[0,20,16,0,21,22,23,0,[1,395,35],[[429,2,24],[429,2,25],[430,2,26]]],[0,27,28,0,29,30,31,0,[1,431,1],[[432,2,32]]],[0,27,28,0,29,33,34,0,[1,433,1],[[434,2,35]]],[0,36,37,0,38,39,40,0,[1,435,0],[[435,2,41]]],[0,36,37,0,38,42,43,0,[1,436,1],[[436,2,44]]],[0,45,46,0,47,48,0,0,[1,437,14],[[437,3,50],[439,2,51],[450,2,52],[451,2,53],[451,2,54]]],[0,55,46,0,56,57,58,0,[1,452,2],[[452,2,59],[453,2,52],[453,2,60],[454,2,61]]],[0,62,28,0,63,64,0,0,[1,454,1],[]],[0,65,28,0,66,67,0,0,[1,457,1],[]],[0,27,28,0,29,68,69,0,[1,459,1],[[460,2,70]]],[0,71,28,0,72,73,0,0,[1,461,1],[]],[0,65,28,0,66,74,0,0,[1,463,1],[]]]]],[[1,75,46,0,76,77,0,0,[1,322,70],[[322,2,78],[322,2,79],[335,2,80]]],[2,81,46,0,82,0,0,0,[1,467,0],[]]],[1,1,0,0]]],[],[],[1,1,0,0]]],[],[],[1,1,0,0]]],[],[],[1,1,0,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*Login Test","*C:\\Users\\arenaho.muhali\\PycharmProjects\\MUHALI_ARENAHO_HOLDINGS\\Web_Automation\\login_test.robot","*Web_Automation/login_test.robot","*Load And Print Credentials","*No keyword with name 'Load Credentials' found.","*Load Credentials","*Book11.xlsx","*Get Credential By Index","*${INDEX}","*${username}    ${password}","*Log","*BuiltIn","*<p>Logs the given message with the given level.\x3c/p>","*Username: ${username}","*Password: ${password}","*Error in file 'C:\\Users\\arenaho.muhali\\PycharmProjects\\MUHALI_ARENAHO_HOLDINGS\\Web_Automation\\login_test.robot' on line 2: Library 'test_data.py' does not exist."]);
+window.output["strings"] = window.output["strings"].concat(["*","*MUHALIARENAHOHOLDINSs","*C:\\Users\\ARENAHO JUSKA\\PycharmProjects\\MUHALIARENAHOHOLDINSs","*.","*Web Playwright","*C:\\Users\\ARENAHO JUSKA\\PycharmProjects\\MUHALIARENAHOHOLDINSs\\Web Playwright","*Web%20Playwright","*API PLAYWRIGHT","*C:\\Users\\ARENAHO JUSKA\\PycharmProjects\\MUHALIARENAHOHOLDINSs\\Web Playwright\\API PLAYWRIGHT","*Web%20Playwright/API%20PLAYWRIGHT","*GET","*C:\\Users\\ARENAHO JUSKA\\PycharmProjects\\MUHALIARENAHOHOLDINSs\\Web Playwright\\API PLAYWRIGHT\\GET.robot","*Web%20Playwright/API%20PLAYWRIGHT/GET.robot","*Comprehensive Employee API and Database Validation","*<p>Validates API Response against PostgreSQL Database using modern keywords.\x3c/p>","*Create Session","*RequestsLibrary","*<p>Create Session: create a HTTP session to a server\x3c/p>","*local_api    ${FULL_URL}","*Creating Session using : alias=local_api, url=http://localhost:8080/api/employees, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 ","*GET On Session","*<p>Sends a GET request on a previously created HTTP Session.\x3c/p>","*local_api    url=    expected_status=200","*${response}","*GET Request : url=http://localhost:8080/api/employees \n path_url=/api/employees \n headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n ","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","*${response} = &lt;Response [200]&gt;","*Set Variable","*BuiltIn","*<p>Returns the given values which can then be assigned to a variables.\x3c/p>","*${response.json()}","*${json_body}","eNqdjs0KwjAQhF8lh8JeSi7iRRD8uQn2BTzIapN0a5ItSYNI6bvbRcG7x5nvg5lq6jPH643b16y26jIBtbBRq1qBpZTHBoNZMuyTidix6kt+ICzU4w+eS4eepDUByUuFH19066zDnROi7xxEGzDnJydZgtOAB8zmyNGSKwlH4ljBXKvvlfU/V7TWb7izRzE=","*${json_body[0]}","*${api_emp}","*${api_emp} = {'id': 3, 'firstName': 'Arenaho juska', 'lastName': 'Muhali', 'email': 'arenahojuskfgfga@gmail.com', 'password': 'JpaBaseConfiguration$'}","*Get From Dictionary","*Collections","*<p>Returns a value from the given <code>dictionary\x3c/code> based on the given <code>key\x3c/code>.\x3c/p>","*${api_emp}    id","*${api_id}","*${api_id} = 3","*${api_emp}    firstName","*${api_name}","*${api_name} = Arenaho juska","*Row Count Is Greater Than X","*DatabaseLibrary","*<p><b>DEPRECATED\x3c/b> Use new `Check Row Count` keyword with assertion engine instead. The deprecated keyword will be removed in future versions.\x3c/p>","*SELECT * FROM employees WHERE id = ${api_id} AND first_name ILIKE '${api_name}'    0","*s1-s1-s1-s1-t1-k7","*Keyword 'DatabaseLibrary.Row Count Is Greater Than X' is deprecated. Use new `Check Row Count` keyword with assertion engine instead.\nThe deprecated keyword will be removed in future versions.","*Executing sql:<br><code style=\"font-weight: bold;\">SELECT * FROM employees WHERE id = 3 AND first_name ILIKE 'Arenaho juska'\x3c/code>","*Commit the transaction","*Retrieved 1 rows","eNrVlt2OmzAQhV9llLTSrlQaaHdXFaRRf+4q9aL7AqsJHoMbx2PZJsDb1wTIbtVetFJyEaEBNIzOfMfCA2uhDuBDr+njYo9d0ioR6hyyNH1dAB/ISc1t0uWATeAChpKaVFWHHO7T1HYvivqpaLFZB9xqmmUnyVFgy06QS0rWGq2nHOa7+VEO72wHnrUS4KrtTXaXwhS3UblEGxSbWTtQFxLUqjI5aJKhAMkmJO2EuGUtCrAohDJVJI68i82PhlwPjkLjDAnIwHHr16tJOcK7GDX4km3sEPkWczfLXg01eUyoctcXENjmkBaDC3b5VmO5i0biuXLcGJGMeViKByrF3bPH7HePD9HfGLfFifZDrMmGJX5psiQTyEUXj9yuV6H+f9S/0N2nwzG7gKWUsjgfqRJXAkp7VPrpanClcj48GdzTlQBrvC5ei963UW3EXR3ngps5/6Q5oLtJEk8lG4GuH9NvYElEw+R6thvnzcnuPw6O85lKp8UXJyNnk34fpcVlpNGRwZp/Nn4nK1nhp2rYq29L3l+u5+exJwxN8XJtvjd1TF1O/5vFL+jpKxupqsbhsLleje2Or/Tq+LGO1/gnsPkFop2riQ==","*Query","*<p>Runs a query with the <code>select_statement\x3c/code> and returns the result as list of rows. The type of row values depends on the database module - usually they are tuples or tuple-like objects.\x3c/p>","*SELECT first_name FROM employees WHERE id = ${api_id}","*${db_result}","*Executing sql:<br><code style=\"font-weight: bold;\">SELECT first_name FROM employees WHERE id = 3\x3c/code>","eNqtk/FqpDAQh19l2OWghcpqaUuJ24U+wt0LHNGMmttsRiZx1be/seq25e6PFhaJShx++b6J2Rt7hhBHhy+bkx6S3prYKMjS9EcOdEauHPXJoEB3kXKYShq0dRMVPKZpO3woGpeizWEfdeFwjV0i54CC2CAnJTmn24AK1rf1k4L7doBAzhrgurjJHlJYxq0kl7qNlvyaHXGIiXa29gocVjGHinxM+gWxIGdyaLUx1tdCLLybw88OeQTG2LFHAxkw9WG/W5IFnmU0EEpqZQXh26yrtRTsVKNkwpbHMYdIrYI0nyyIVeF0eRQRuddMnTfJPA9b84SleXh3zD47PonfPG7zC+2z1GRTiz9Klugjslj8on6/i833Uf9D95hO12oB26qq8uuRVpZD/O31CWfg3VuDeSX9l+es+SZJApbkjeZxnr6DLSJOv8C7sGzcRfiLO3A9rXRpv7mIXC36ldHrhuBPF45aljFL03Zv50qecmgPfwG9Mj9g","*${db_result} = [('Arenaho juska',)]","*Should Be Equal As Strings","*<p>Fails if objects are unequal after converting them to strings.\x3c/p>","*${api_name}    ${db_result[0][0]}","*Log To Console","*<p>Logs the given message to the console.\x3c/p>","*\\nVerified: API Name '${api_name}' matches Database Record for ID ${api_id}","*${response.elapsed.total_seconds()}","*${speed}","*${speed} = 0.030858","*Should Be True","*<p>Fails if the given condition is not true.\x3c/p>","*${speed} &lt; 1.0","*API Speed: ${speed}s | Data Integrity: Confirmed","*Connect To Database","*<p>Creates a database connection using the DB API 2.0 <code>db_module\x3c/code> and the parameters provided. Along with listed commonly used arguments (`db_name`, `db_host` etc.) you can set any other DB module specific parameters as key/value pairs.\x3c/p>","*psycopg2    AJM    postgres    ARENAHOJUSKA    localhost    5432","*Looking for configuration file: 'resources\\db.cfg'","*Configuration file doesn't exist","*Connect to DB using : psycopg2.connect(database='AJM', user='postgres', password=***, host='localhost', port=5432)","*Disconnect From Database","*<p>Disconnects from the database.\x3c/p>","*Error in file 'C:\\Users\\ARENAHO JUSKA\\PycharmProjects\\MUHALIARENAHOHOLDINSs\\Web Playwright\\Test Cases\\cart.robot' on line 73: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead."]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:00:00","fail":1,"label":"All Tests","pass":0,"skip":0}],[],[{"elapsed":"00:00:00","fail":1,"id":"s1","label":"Login Test","name":"Login Test","pass":0,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:00:00","fail":0,"label":"All Tests","pass":1,"skip":0}],[],[{"elapsed":"00:00:00","fail":0,"id":"s1","label":"MUHALIARENAHOHOLDINSs","name":"MUHALIARENAHOHOLDINSs","pass":1,"skip":0},{"elapsed":"00:00:00","fail":0,"id":"s1-s1","label":"MUHALIARENAHOHOLDINSs.Web Playwright","name":"Web Playwright","pass":1,"skip":0},{"elapsed":"00:00:00","fail":0,"id":"s1-s1-s1","label":"MUHALIARENAHOHOLDINSs.Web Playwright.API PLAYWRIGHT","name":"API PLAYWRIGHT","pass":1,"skip":0},{"elapsed":"00:00:00","fail":0,"id":"s1-s1-s1-s1","label":"MUHALIARENAHOHOLDINSs.Web Playwright.API PLAYWRIGHT.GET","name":"GET","pass":1,"skip":0}]];
 </script>
 <script type="text/javascript">
-window.output["errors"] = [[44,4,16]];
+window.output["errors"] = [[-30,3,83],[437,3,50,49]];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1752819429139;
+window.output["baseMillis"] = 1775291660404;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 56;
+window.output["generated"] = 485;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;
 </script>
 <script type="text/javascript">
-window.settings = {"defaultLevel":"INFO","minLevel":"FAIL","reportURL":"report.html","rpa":false,"splitLogBase":"log","title":""};
+window.settings = {"defaultLevel":"INFO","minLevel":"INFO","reportURL":"report.html","rpa":false,"splitLogBase":"log","title":""};
 </script>
 <title></title>
 </head>
@@ -2154,8 +2153,9 @@ function addErrors() {
     var errors = window.testdata.errorIterator();
     if (errors.hasNext()) {
         $.tmpl('errorHeaderTemplate').appendTo($('body'));
-        drawErrorsRecursively(errors, $('#errors'));
+        drawErrorsRecursively(errors, $('#errors .messages'));
     }
+    toggleElement('errors');
 }
 
 function drawErrorsRecursively(errors, target) {
@@ -2189,7 +2189,7 @@ function makeElementVisible(id) {
 }
 
 function addExecutionLog(main) {
-    $('body').append($(testOrTask('<h2>{Test} Execution Log</h2>')),
+    $('body').append('<h2>Execution Log</h2>',
                      $.tmpl('suiteTemplate', main));
 }
 </script>
@@ -2234,20 +2234,31 @@ function addExecutionLog(main) {
 </script>
 
 <script type="text/x-jquery-tmpl" id="errorHeaderTemplate">
-  <h2>{{= testOrTask('{Test}')}} Execution Errors</h2>
-  <table id="errors"></table>
+  <h2>Execution Errors</h2>
+  <div id="errors">
+    <div class="element-header closed" onclick="toggleElement('errors')">
+      <div class="element-header-toggle" title="Toggle visibility"></div>
+      <div class="label error">ERRORS</div>
+      <div class="name">Errors and warnings during execution</div>
+    </div>
+    <div class="children">
+      <table class="messages"></table>
+    </div>
+  </div>
 </script>
 
 <script type="text/x-jquery-tmpl" id="errorTemplate">
   <tr id="${id}" class="message-row">
-    <td class="error-time">
+    <td class="time">
       {{if link}}
       <a onclick="makeElementVisible('${link}')" href="#${link}" title="Link to details">${date} ${time}</a>
       {{else}}
       ${date} ${time}
       {{/if}}
     </td>
-    <td class="${level.toLowerCase()} level"><span class="label ${level.toLowerCase()}">${level}</span></td>
+    <td class="${level.toLowerCase()} level">
+      <span class="label ${level.toLowerCase()}">${level}</span>
+    </td>
     <td class="message">{{html text}}</td>
     <td class="select-message" onclick="javascript:selectMessage('${id}')" title="Select message text">
       <div></div>
@@ -2257,18 +2268,18 @@ function addExecutionLog(main) {
 
 <script type="text/x-jquery-tmpl" id="suiteTemplate">
   <div id="${id}" class="suite">
-    <div class="element-header closed" onclick="toggleSuite('${id}')">
-      <div class="element-header-left" title="SUITE  {{html name}}  [${status}]">
-        <span class="elapsed" title="Elapsed time">${times.elapsedTime}</span>
-        <span class="label ${status.toLowerCase()}">SUITE</span>
-        <span class="name">{{html name}}</span>
-      </div>
-      <div class="element-header-right" onclick="stopPropagation(event)" title="">
+    <div class="element-header closed" onclick="toggleSuite('${id}')"
+         title="SUITE  {{html name}}  [${status}]">
+      <div class="element-header-toggle" title="Toggle visibility"></div>
+      <div class="label ${status.toLowerCase()}">SUITE</div>
+      <div class="name">{{html name}}</div>
+      <div class="elapsed" title="Elapsed time">${times.elapsedTime}</div>
+      <div class="element-header-menu" onclick="stopPropagation(event)" title="">
         <a class="expand" title="Expand all" href="javascript:expandAll('${id}')"></a>
         <a class="collapse" title="Collapse all" href="javascript:collapseAll('${id}')"></a>
-        <a class="link" title="Link to this suite" href="#${id}" onclick="makeElementVisible('${id}')"></a>
+        <a class="link" onclick="makeElementVisible('${id}')"
+           title="Link to this suite" href="#${id}"></a>
       </div>
-      <div class="element-header-toggle" title="Toggle visibility"></div>
     </div>
     <div class="children">
       <table class="metadata">
@@ -2319,18 +2330,18 @@ function addExecutionLog(main) {
 
 <script type="text/x-jquery-tmpl" id="testTemplate">
   <div id="${id}" class="test">
-    <div class="element-header closed" onclick="toggleTest('${id}')">
-      <div class="element-header-left" title="{{= testOrTask('{TEST}')}}  {{html name}}  [${status}]">
-        <span class="elapsed" title="Elapsed time">${times.elapsedTime}</span>
-        <span class="label ${status.toLowerCase()}">{{= testOrTask('{TEST}')}}</span>
-        <span class="name">{{html name}}</span>
-      </div>
-      <div class="element-header-right" onclick="stopPropagation(event)" title="">
+    <div class="element-header closed" onclick="toggleTest('${id}')"
+         title="{{= testOrTask('{TEST}')}}  {{html name}}  [${status}]">
+      <div class="element-header-toggle" title="Toggle visibility"></div>
+      <div class="label ${status.toLowerCase()}">{{= testOrTask('{TEST}')}}</div>
+      <div class="name">{{html name}}</div>
+      <div class="elapsed" title="Elapsed time">${times.elapsedTime}</div>
+      <div class="element-header-menu" onclick="stopPropagation(event)" title="">
         <a class="expand" title="Expand all" href="javascript:expandAll('${id}')"></a>
         <a class="collapse" title="Collapse all" href="javascript:collapseAll('${id}')"></a>
-        <a class="link" title="Link to this {{= testOrTask('{test}')}}" href="#${id}" onclick="makeElementVisible('${id}')"></a>
+        <a class="link" href="#${id}" onclick="makeElementVisible('${id}')"
+           title="Link to this {{= testOrTask('{test}')}}"></a>
       </div>
-      <div class="element-header-toggle" title="Toggle visibility"></div>
     </div>
     <div class="children">
       <table class="metadata">
@@ -2377,21 +2388,20 @@ function addExecutionLog(main) {
 
 <script type="text/x-jquery-tmpl" id="keywordTemplate">
   <div id="${id}" class="keyword">
-    <div class="element-header closed" onclick="toggleKeyword('${id}')">
-      <div class="element-header-left" title="${type}  {{if name}}{{html fullName}}  {{/if}}[${status}]">
-        <span class="elapsed" title="Elapsed time">${times.elapsedTime}</span>
-        <span class="label ${status.toLowerCase()}">${type}</span>
-        <span class="assign">{{html assign}}</span>
-        <span class="name"><span class="parent-name">{{html libname}}{{if libname}} . {{/if}}</span>{{html name}}</span>
-        &nbsp;
-        <span class="arg">{{html arguments}}</span>
-      </div>
-      <div class="element-header-right" onclick="stopPropagation(event)">
+    <div class="element-header closed" onclick="toggleKeyword('${id}')"
+         title="${type}  {{if name}}{{html fullName}}  {{/if}}[${status}]">
+      <div class="element-header-toggle" title="Toggle visibility"></div>
+      <div class="label ${status.toLowerCase()}">${type}</div>
+      {{if assign}}<div class="assign">{{html assign}}&nbsp;=</div>{{/if}}
+      <div class="name">{{if libname}}<span class="parent-name">{{html libname}} . </span>{{/if}}{{html name}}</div>
+      <div class="arg">{{html arguments}}</div>
+      <div class="elapsed" title="Elapsed time">${times.elapsedTime}</div>
+      <div class="element-header-menu" onclick="stopPropagation(event)">
         <a class="expand" title="Expand all" href="javascript:expandAll('${id}')"></a>
         <a class="collapse" title="Collapse all" href="javascript:collapseAll('${id}')"></a>
-        <a class="link" title="Link to this item" href="#${id}" onclick="makeElementVisible('${id}')"></a>
+        <a class="link" onclick="makeElementVisible('${id}')"
+           title="Link to this item" href="#${id}"></a>
       </div>
-      <div class="element-header-toggle" title="Toggle visibility"></div>
     </div>
     <div class="children">
       <table class="metadata keyword-metadata">

@@ -22,11 +22,11 @@ Cart
         ${found_price}=    Evaluate    re.search(r"\\d+\\.\\d{2}", """${clean}""") is not None    modules=re
 
         IF    ${found_price}
-            Log To Console    ✅ Adding price: ${clean}
+            Log To Console     Adding price: ${clean}
             # Add and update total
             ${total}=    Evaluate    ${total} + float(${clean})
         ELSE
-            Log To Console    ❌ Skipping: ${text} (Cleaned: ${clean})
+            Log To Console     Skipping: ${text} (Cleaned: ${clean})
         END
     END
 
@@ -34,7 +34,7 @@ Cart
     ${formatted_total}=    Evaluate    "{:.2f}".format(${total})
 
     Log To Console    ==============================
-    Log To Console    🏁 Final Calculated Total: R${formatted_total}
+    Log To Console     Final Calculated Total: R${formatted_total}
     Log To Console    ==============================
 
 
@@ -54,18 +54,18 @@ Cart
     # --- Compare calculated vs shown totals ---
     Should Be Equal    ${formatted_total}    ${formatted_ui_total}
 
-    Log To Console    🟢 Cart total matches UI (both R${formatted_total})
+    Log To Console     Cart total matches UI (both R${formatted_total})
 
 
 
 
     # --- IF / ELSE validation with screenshots ---
     IF    '${formatted_total}' == '${formatted_ui_total}'
-        Log To Console    🟢 Cart total matches UI (R${formatted_total})
+        Log To Console     Cart total matches UI (R${formatted_total})
                 screenshot.Take Screenshot
 
     ELSE
-        Log To Console    🔴 Cart total mismatch! Expected UI: R${formatted_ui_total}, Calculated: R${formatted_total}
+        Log To Console     Cart total mismatch! Expected UI: R${formatted_ui_total}, Calculated: R${formatted_total}
         screenshot.Take Screenshot
         Fail    Cart total did not match UI
     END

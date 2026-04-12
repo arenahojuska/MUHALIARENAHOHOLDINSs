@@ -1,43 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.1 (Python 3.13.5 on win32)" generated="2025-07-18T08:17:09.135949" rpa="false" schemaversion="5">
-<suite id="s1" name="Login Test" source="C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\Web_Automation\login_test.robot">
-<test id="s1-t1" name="Load And Print Credentials" line="8">
-<kw name="Load Credentials">
-<msg time="2025-07-18T08:17:09.187531" level="FAIL">No keyword with name 'Load Credentials' found.</msg>
-<arg>Book11.xlsx</arg>
-<status status="FAIL" start="2025-07-18T08:17:09.187234" elapsed="0.000367">No keyword with name 'Load Credentials' found.</status>
+<robot generator="Robot 7.4.2 (Python 3.13.5 on win32)" generated="2026-04-04T10:34:20.399120" rpa="false" schemaversion="5">
+<suite id="s1" name="MUHALIARENAHOHOLDINSs" source="C:\Users\ARENAHO JUSKA\PycharmProjects\MUHALIARENAHOHOLDINSs">
+<suite id="s1-s1" name="Web Playwright" source="C:\Users\ARENAHO JUSKA\PycharmProjects\MUHALIARENAHOHOLDINSs\Web Playwright">
+<suite id="s1-s1-s1" name="API PLAYWRIGHT" source="C:\Users\ARENAHO JUSKA\PycharmProjects\MUHALIARENAHOHOLDINSs\Web Playwright\API PLAYWRIGHT">
+<suite id="s1-s1-s1-s1" name="GET" source="C:\Users\ARENAHO JUSKA\PycharmProjects\MUHALIARENAHOHOLDINSs\Web Playwright\API PLAYWRIGHT\GET.robot">
+<kw name="Connect To Database" owner="DatabaseLibrary" type="SETUP">
+<msg time="2026-04-04T10:34:20.726045" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
+<msg time="2026-04-04T10:34:20.726217" level="INFO">Configuration file doesn't exist</msg>
+<msg time="2026-04-04T10:34:20.739361" level="INFO">Connect to DB using : psycopg2.connect(database='AJM', user='postgres', password=***, host='localhost', port=5432)</msg>
+<arg>psycopg2</arg>
+<arg>AJM</arg>
+<arg>postgres</arg>
+<arg>ARENAHOJUSKA</arg>
+<arg>localhost</arg>
+<arg>5432</arg>
+<doc>Creates a database connection using the DB API 2.0 ``db_module`` and the parameters provided.
+Along with listed commonly used arguments (`db_name`, `db_host` etc.)
+you can set any other DB module specific parameters as key/value pairs.</doc>
+<status status="PASS" start="2026-04-04T10:34:20.725650" elapsed="0.069760"/>
 </kw>
-<kw name="Get Credential By Index">
-<var>${username}</var>
-<var>${password}</var>
-<arg>${INDEX}</arg>
-<status status="NOT RUN" start="2025-07-18T08:17:09.187906" elapsed="0.000028"/>
+<test id="s1-s1-s1-s1-t1" name="Comprehensive Employee API and Database Validation" line="14">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-04-04T10:34:20.797173" level="INFO">Creating Session using : alias=local_api, url=http://localhost:8080/api/employees, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>local_api</arg>
+<arg>${FULL_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-04-04T10:34:20.796841" elapsed="0.000638"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<arg>Username: ${username}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2025-07-18T08:17:09.188206" elapsed="0.000032"/>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-04-04T10:34:20.832920" level="INFO">GET Request : url=http://localhost:8080/api/employees 
+ path_url=/api/employees 
+ headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-04-04T10:34:20.833273" level="INFO">GET Response : url=http://localhost:8080/api/employees 
+ status=200, reason= 
+ headers={'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Date': 'Sat, 04 Apr 2026 08:34:20 GMT', 'Keep-Alive': 'timeout=60', 'Connection': 'keep-alive'} 
+ body=[{"id":3,"firstName":"Arenaho juska","lastName":"Muhali","email":"arenahojuskfgfga@gmail.com","password":"JpaBaseConfiguration$"},{"id":5,"firstName":"Arenaho juska","lastName":"Muhali","email":"arenahojuskaaa@gmail.com","password":"arenahojuska@gmail.com"},{"id":7,"firstName":"Arenaho juska","lastName":"Muhali","email":"arenahojushgkaaa@gmail.com","password":"arenahojuska@gmail.com"},{"id":8,"firstName":"Arenaho juska","lastName":"Muhali","email":"arenahojus1232hgkaaa@gmail.com","password":"arenahojuska@gmail.com"},{"id":9,"firstName":"Arenaho juska","lastName":"Muhali","email":"arenahojus12329hgkaaa@gmail.com","password":"arenahojuska@gmail.com"},{"id":12,"firstName":"Arenaho juska","lastName":"Muhali","email":"arenahojus12329h99gkaaa@gmail.com","password":"arenahojuska@gmail.com"},{"id":13,"firstName":"Arenaho juska","lastName":"Muhali","email":"arena12329h99gkaaa@gmail.com","password":"arenahojuska@gmail.com1"},{"id":14,"firstName":"juska","lastName":"aaJONDfddES","email":"arIenahggcjkghghsdllsddfDo.jH@example.com","password":"yourSecurePassword123"},{"id":15,"firstName":"Arenaho","lastName":"Muhali","email":"a1renahojusska@gmail.com","password":"arenahojusska@gmail.com"},{"id":19,"firstName":"Arenaho","lastName":"Muhali","email":"a1renahojugsska@gmail.com","password":"arenahojusska@gmail.com"},{"id":21,"firstName":"a","lastName":"a","email":"ara@gmail.com","password":"arenahojuska@gmail.com"},{"id":22,"firstName":"Arenaho juska","lastName":"Muhali","email":"hhuska@gmail.com","password":"arenahojuska@gmail.com"},{"id":23,"firstName":"Arenaho juska","lastName":"Muhali","email":"hhusITa@gmail.com","password":"arenahojuska@gmail.com"},{"id":25,"firstName":"Arenaho juska","lastName":"Muhali","email":"hhusITaJ@gmail.com","password":"arenahojuska@gmail.com"},{"id":27,"firstName":"Arenaho juska","lastName":"Muhali","email":"arenahojuskTGFa@gmail.com","password":"arenahojuska@gmail.com"},{"id":28,"firstName":"Arenaho juska","lastName":"Muhali","email":"arenahojuHHska@gmail.com","password":"arenahojuska@gmail.com"},{"id":29,"firstName":"Arenaho juska","lastName":"Muhali","email":"arenahojuIHHska@gmail.com","password":"arenahojuska@gmail.com"},{"id":30,"firstName":"Arenaho juska","lastName":"Muhali","email":"arenaEhoKjuska@gmail.com","password":"arenahoKjuska@gmail.com"},{"id":31,"firstName":"Arenaho juska","lastName":"Muhali","email":"arenaEhhoKjuska@gmail.com","password":"arenaEhoKjuska@gmail.com"},{"id":32,"firstName":"Arenaho juska","lastName":"Muhali","email":"arenaEhhjoKjuska@gmail.com","password":"arenaEhhoKjuska@gmail.com"},{"id":33,"firstName":"Arenaho juska","lastName":"Muhali","email":"arenaEhhoKghjkuska@gmail.com","password":"$2a$10$yNi7KlHk1Fv8jagFZYL5IuvTzmUYMa3EIbdIzWGNBV0vCwICNALau"},{"id":34,"firstName":"Arenaho juska","lastName":"Muhali","email":"arena@gmail.com","password":"$2a$10$8oaqz0ALpADPwU7.5qP3z.dM5fKxQngWi0gwgXEL7UK4ITxflUb.K"},{"id":35,"firstName":"juska","lastName":"aaJONDfddES","email":"arIenahggcjjttjkghghsdllsddfDo.jH@example.com","password":"$2a$10$09wJ4HPbPgdjm.C8r0xAi.SyVE3ZcrJ8/mCJTR2KMeDM2fkDELh3S"},{"id":36,"firstName":"juska","lastName":"aaJONDfddES","email":"johnsmith4235671234@gmail.com","password":"$2a$10$MWRwBr7tsPfySec2hs0a7.VdLARndek5tbwq3CVEf/KK8wARLUTRO"},{"id":38,"firstName":"juska","lastName":"aaJONDfddES","email":"johnsmitLhGH4235671234@gmail.com","password":"$2a$10$b3ZY332CnKFYdauJuaQLAuxamFqoIuxoVFzGcs24koxNwt0GZqxzu"},{"id":39,"firstName":"juska","lastName":"aaJONDfddES","email":"johnsmitLhJH235671234@gmail.com","password":"$2a$10$GxeMcYskoe9V7PrnOF1WyeU1rAF0THC7GI5WEeRREUdAIMtCX81Gi"},{"id":40,"firstName":"juska","lastName":"aaJONDfddES","email":"johnsLmHG235671234@gmail.com","password":"$2a$10$9yRzs5g8CMhvSYXklKo8i.amYZpb6K4cdppppH6slwktK2iEC.o6G"},{"id":41,"firstName":"juska","lastName":"aaJONDfddES","email":"johnsLmHG2356OP71234@gmail.com","password":"$2a$10$N8qhZfNJVsFOXtxb.mXNPu1ffVvrXr/0nTK4wPUW8O8TNa6ZKAnkm"},{"id":42,"firstName":"juska","lastName":"aaJONDfddES","email":"johHG2356OP71234@gmail.com","password":"$2a$10$o1RQ1tXlYTzRQhlGnz4sF.u5UcXO2Tcht9Lz..K8AdvDGGuxhVRjq"},{"id":43,"firstName":"juska","lastName":"aaJONDfddES","email":"johHG2IJ@gmail.com","password":"$2a$10$4aKkO9JME2QeFIPAJ03dMeuxrUMwXHtmrFOgiqKAifybePZ9NOeJe"},{"id":44,"firstName":"juska","lastName":"aaJONDfddES","email":"johG2IJ@gmail.com","password":"$2a$10$aPzh4ERSGBRXgmHubkjPbOpZYIPlX4vzD7ZJHAjMnStbtRpVxjJHK"},{"id":45,"firstName":"juska","lastName":"aaJONDfddES","email":"johG2UIJ@gmail.com","password":"$2a$10$iMR1mOlBN5ShgOZfYhGUqOcaUfJ7w.wIGZzRhIogopoDO1C4x4YWO"},{"id":46,"firstName":"juska","lastName":"aaJONDfddES","email":"johG2UIHJ@gmail.com","password":"$2a$10$XKtuH/kNCghXkOx9v6CkOOqhB61OpuR14Ty9QKt.Eyh6RCiLG4g3i"},{"id":47,"firstName":"juska","lastName":"aaJONDfddES","email":"johG2HUIHJ@gmail.com","password":"$2a$10$tcuU6EggHdl5NWMJFPJikeRjBauLA/ClQ4f2C7jt02h4.PiorsIuO"},{"id":48,"firstName":"juska","lastName":"aaJONDfddES","email":"johKHFIHJ@gmail.com","password":"$2a$10$/hpVge3dcQmW3hDKlOMAFOzzL.8hm1/1xN17pNvLWhLPNmdqmwYve"},{"id":49,"firstName":"juska","lastName":"aaJONDfddES","email":"johKHFIHHJ@gmail.com","password":"$2a$10$lUelluiPyHrYKGSXkH9D1eELd9tk1SshJQp/elmrhgW6hwG0S8/3G"},{"id":51,"firstName":"juska","lastName":"aaJONDfddES","email":"joftFIHr@gmail.com","password":"$2a$10$W7/BsW47OXa4Yy4.S0LQ9O3nlMKL6yUwUp.rkhCVNa2mbAE7N9LXe"},{"id":54,"firstName":"juska","lastName":"aaJONDfddES","email":"joftFIHvr@gmail.com","password":"$2a$10$958YnpP1Imw1E8he5EMFvOukE2nrD0pJfqQzsi1TCQLqlTWd4jGCS"},{"id":55,"firstName":"juska","lastName":"aaJONDfddES","email":"jofthFIHvr@gmail.com","password":"$2a$10$b9B8fcMxLs1I8vfvpatfjec7qhD0NQD4mUHQBpgyiYE.G38x2xBAu"},{"id":56,"firstName":"juska","lastName":"aaJONDfddES","email":"jofthFIHvlr@gmail.com","password":"$2a$10$9mIBK7C8A3.OTMsrTXScg.JBM/PjYUPv5YAfoXpppHdwYa1FXLTMi"},{"id":57,"firstName":"juska","lastName":"aaJONDfddES","email":"jofthFpIHvlr@gmail.com","password":"$2a$10$uD26LfsDRbiZKNdOIBPy5eM5iETFfkHI1Uh5zJplhaXEtw2GtyIXK"},{"id":58,"firstName":"juska","lastName":"aaJONDfddES","email":"jofhthFpIHvlr@gmail.com","password":"$2a$10$R.pzfnqFP9otKKUzmBefOO9HlTl6mm0BJv54xaYGLunHd5WiYMtvm"},{"id":59,"firstName":"juska","lastName":"aaJONDfddES","email":"jofhtfghFpIHvlr@gmail.com","password":"$2a$10$N749kh9N9b6lL1hROyWWQOPwfMTGmSsJZXXVhpTe/Jxey1.eiFL/O"},{"id":60,"firstName":"juska","lastName":"aaJONDfddES","email":"jowe@gmail.com","password":"$2a$10$Ja5RaaoajXipYRJZXPy5U.Nqfx3tKHI4Fj5htfZcJsGSw3/AGyP9i"},{"id":61,"firstName":"juska","lastName":"aaJONDfddES","email":"joweHH@gmail.com","password":"$2a$10$UrpQ3x9XD0rPp9rGU7DqVO1A5fyglYEBatql40CpDffED3K7k66PW"},{"id":62,"firstName":"juska","lastName":"aaJONDfddES","email":"jowejHH@gmail.com","password":"$2a$10$LPrzera9sFTJkQKAZa.tA.7tmoJlYJ/Nh8Ra8JzoO6ONFMoOBUslW"},{"id":63,"firstName":"juska","lastName":"aaJONDfddES","email":"jowehjHH@gmail.com","password":"$2a$10$zA2aayzXWRuO3EOf8TIAkOO4r7RS2rDcRk07zSHFn7CHiJ8lmW9Ay"},{"id":1,"firstName":"Muhali","lastName":"Creative","email":"muhali.dageg@muhali.co.za","password":"$2a$10$Zv7ViHozY6GPd9.2OEe59.iOeENka2AZPDRvCymuAfyym7xstYBRm"},{"id":66,"firstName":"Thompho","lastName":"aaJONDfddES","email":"tshikoskilthompho01@gmail.com","password":"$2a$10$oc50Bjx2cxWj6jDOGqdqd.iLF/WR0Fc5Q1zxamGvNyhIQYlaZufTy"},{"id":69,"firstName":"Thompho","lastName":"aaJONDfddES","email":"arenahg@ maildrop.cc","password":"$2a$10$7XVhJx2GUkDwuk7WLqieiOwMruc/3yusHB0kxXQyEW/PKat0.VZM."},{"id":70,"firstName":"Thompho","lastName":"aaJONDfddES","email":"arenahg@maildrop.cc","password":"$2a$10$FLFVSGoCI49k85TThtudce/Q2HqTdLSsu1J1a.9FWNPxZwNM2jdpO"},{"id":71,"firstName":"Thompho","lastName":"aaJONDfddES","email":"blue.salamander4472@maildrop.cc","password":"$2a$10$QKmmus0WDpjllqOJel.sWuUWxNI5RvQTda9YsS6QbUAHBwl4maa4K"},{"id":72,"firstName":"Thompho","lastName":"aaJONDfddES","email":"aret@maildrop.cc","password":"$2a$10$IA/LJF.Kp8PMiPvjjIii3uV4veYWvEh0hSj6i5rphdYEwoFDbBjti"},{"id":73,"firstName":"Thompho","lastName":"aaJONDfddES","email":"areth@maildrop.cc","password":"$2a$10$46tXBG.ceMqh7/k50vPkION4ZdyZNCUuTxMed31OBf3hla/G34D1K"},{"id":74,"firstName":"Thompho","lastName":"aaJONDfddES","email":"arethoho@maildrop.cc","password":"$2a$10$ySC8gS.O.o4rQO5OXuPGG.ugsLQc.VoyZsrErungGIXYTTEi3Ogli"},{"id":75,"firstName":"Thompho","lastName":"aaJONDfddES","email":"arethohoys@maildrop.cc","password":"$2a$10$naeRj1/XwHauKNsPi/WcOed6J84pmlsXsAG9iirMqaF06HXQo46sG"},{"id":76,"firstName":"Thompho","lastName":"aaJONDfddES","email":"arethod@maildrop.cc","password":"$2a$10$BoTfjrHECRgRnVhRk.LHu.Xm4hef9mHbXhyHK6FnWwAqpRUzhA7dW"},{"id":77,"firstName":"Thompho","lastName":"aaJONDfddES","email":"arethoda@maildrop.cc","password":"$2a$10$7aDR0rh6.kxAv32gif8BwO9LP2JqhuXbWP8BWNsP7uV9m4BwozIG."},{"id":78,"firstName":"Thompho","lastName":"aaJONDfddES","email":"tetst@maildrop.cc","password":"$2a$10$5UPz8P7Kl5mxM4k6LcDG.OkgSBBYFRG9qfRYUxmDfNkTc.TjEXo/e"},{"id":79,"firstName":"Thompho","lastName":"aaJONDfddES","email":"arenahot@maildrop.cc","password":"$2a$10$qllaFGkhXSb5IzEbYiMGyuOCJv90YCRhNbTuZ7T.6QHmP3GFzNyOm"},{"id":81,"firstName":"Arenaho juska","lastName":"Muhali","email":"arenallEhoKjuska@gmail.com","password":"$2a$10$v.xFF5bdRdGcDRE5G67t1OW5StjkqPMr48dj5v6GbTf3dAe313Zf6"},{"id":87,"firstName":"Arenaho juska","lastName":"Muhali","email":"arenahoth@maildrop.cc","password":"$2a$10$c6HCibPnf9ChbD4E0MvSTeF.LRElQyj8rBGHb8slAFBF.YqvUy4oe"},{"id":88,"firstName":"Arenaho juska","lastName":"Muhali","email":"mphomatodzie@gmail.com","password":"$2a$10$f1crChG8FIh3BnHpMYcieuk1UOuH5bTm4S5c8AOGr2q.V5wokhI8y"},{"id":89,"firstName":"Arenaho juska","lastName":"Muhali","email":"arenaEhgghoKghjkuska@gmail.com","password":"$2a$10$K5LubjAUMlGQ4APTfy.DC.Mc.E.npi/vQBGFRkAWWG6.EAxEwDdRu"},{"id":91,"firstName":"Arenaho juska","lastName":"Muhali","email":"arenaEhhoKghjkusdka@gmail.com","password":"$2a$10$Cepj7MDledEP/wst5IBLrehCByn5UwT.VmeYRgU4PrNlarY6h.M7i"},{"id":92,"firstName":"Arenaho juska","lastName":"Muhali","email":"arenahoth... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg time="2026-04-04T10:34:20.833872" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>local_api</arg>
+<arg>url=</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-04-04T10:34:20.798525" elapsed="0.035397"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<arg>Password: ${password}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2025-07-18T08:17:09.188408" elapsed="0.000018"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-04-04T10:34:20.835835" level="INFO">${json_body} = [{'id': 3, 'firstName': 'Arenaho juska', 'lastName': 'Muhali', 'email': 'arenahojuskfgfga@gmail.com', 'password': 'JpaBaseConfiguration$'}, {'id': 5, 'firstName': 'Arenaho juska', 'lastName': 'Muhali'...</msg>
+<var>${json_body}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-04-04T10:34:20.834538" elapsed="0.001338"/>
 </kw>
-<status status="FAIL" start="2025-07-18T08:17:09.185102" elapsed="0.003608">No keyword with name 'Load Credentials' found.</status>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-04-04T10:34:20.837732" level="INFO">${api_emp} = {'id': 3, 'firstName': 'Arenaho juska', 'lastName': 'Muhali', 'email': 'arenahojuskfgfga@gmail.com', 'password': 'JpaBaseConfiguration$'}</msg>
+<var>${api_emp}</var>
+<arg>${json_body[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-04-04T10:34:20.836786" elapsed="0.000985"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-04-04T10:34:20.839056" level="INFO">${api_id} = 3</msg>
+<var>${api_id}</var>
+<arg>${api_emp}</arg>
+<arg>id</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-04-04T10:34:20.838660" elapsed="0.000452"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-04-04T10:34:20.840377" level="INFO">${api_name} = Arenaho juska</msg>
+<var>${api_name}</var>
+<arg>${api_emp}</arg>
+<arg>firstName</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-04-04T10:34:20.839842" elapsed="0.000611"/>
+</kw>
+<kw name="Row Count Is Greater Than X" owner="DatabaseLibrary">
+<msg time="2026-04-04T10:34:20.841325" level="WARN">Keyword 'DatabaseLibrary.Row Count Is Greater Than X' is deprecated. Use new `Check Row Count` keyword with assertion engine instead.
+The deprecated keyword will be removed in future versions.</msg>
+<msg time="2026-04-04T10:34:20.842816" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT * FROM employees WHERE id = 3 AND first_name ILIKE 'Arenaho juska'&lt;/code&gt;</msg>
+<msg time="2026-04-04T10:34:20.854382" level="INFO">Commit the transaction</msg>
+<msg time="2026-04-04T10:34:20.854732" level="INFO">Retrieved 1 rows</msg>
+<msg time="2026-04-04T10:34:20.854860" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;email_id&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;first_name&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;last_name&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;password&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;3&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;arenahojuskfgfga@gmail.com&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Arenaho juska&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Muhali&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;JpaBaseConfiguration$&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<arg>SELECT * FROM employees WHERE id = ${api_id} AND first_name ILIKE '${api_name}'</arg>
+<arg>0</arg>
+<doc>*DEPRECATED* Use new `Check Row Count` keyword with assertion engine instead.
+The deprecated keyword will be removed in future versions.</doc>
+<status status="PASS" start="2026-04-04T10:34:20.841266" elapsed="0.013744"/>
+</kw>
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2026-04-04T10:34:20.856159" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT first_name FROM employees WHERE id = 3&lt;/code&gt;</msg>
+<msg time="2026-04-04T10:34:20.857068" level="INFO">Commit the transaction</msg>
+<msg time="2026-04-04T10:34:20.857479" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;first_name&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Arenaho juska&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2026-04-04T10:34:20.857691" level="INFO">${db_result} = [('Arenaho juska',)]</msg>
+<var>${db_result}</var>
+<arg>SELECT first_name FROM employees WHERE id = ${api_id}</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2026-04-04T10:34:20.855750" elapsed="0.001981"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${api_name}</arg>
+<arg>${db_result[0][0]}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-04-04T10:34:20.858463" elapsed="0.001247"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nVerified: API Name '${api_name}' matches Database Record for ID ${api_id}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-04-04T10:34:20.860524" elapsed="0.000946"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-04-04T10:34:20.863605" level="INFO">${speed} = 0.030858</msg>
+<var>${speed}</var>
+<arg>${response.elapsed.total_seconds()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-04-04T10:34:20.862549" elapsed="0.001109"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${speed} &lt; 1.0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-04-04T10:34:20.864859" elapsed="0.001451"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>API Speed: ${speed}s | Data Integrity: Confirmed</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-04-04T10:34:20.867400" elapsed="0.000819"/>
+</kw>
+<doc>Validates API Response against PostgreSQL Database using modern keywords.</doc>
+<status status="PASS" start="2026-04-04T10:34:20.795718" elapsed="0.073435"/>
 </test>
-<status status="FAIL" start="2025-07-18T08:17:09.138714" elapsed="0.050539"/>
+<kw name="Disconnect From Database" owner="DatabaseLibrary" type="TEARDOWN">
+<doc>Disconnects from the database.</doc>
+<status status="PASS" start="2026-04-04T10:34:20.871262" elapsed="0.000365"/>
+</kw>
+<status status="PASS" start="2026-04-04T10:34:20.455875" elapsed="0.415818"/>
+</suite>
+<status status="PASS" start="2026-04-04T10:34:20.453763" elapsed="0.420310"/>
+</suite>
+<status status="PASS" start="2026-04-04T10:34:20.451651" elapsed="0.424660"/>
+</suite>
+<status status="PASS" start="2026-04-04T10:34:20.403750" elapsed="0.474752"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Login Test" id="s1" pass="0" fail="1" skip="0">Login Test</stat>
+<stat name="MUHALIARENAHOHOLDINSs" id="s1" pass="1" fail="0" skip="0">MUHALIARENAHOHOLDINSs</stat>
+<stat name="Web Playwright" id="s1-s1" pass="1" fail="0" skip="0">MUHALIARENAHOHOLDINSs.Web Playwright</stat>
+<stat name="API PLAYWRIGHT" id="s1-s1-s1" pass="1" fail="0" skip="0">MUHALIARENAHOHOLDINSs.Web Playwright.API PLAYWRIGHT</stat>
+<stat name="GET" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">MUHALIARENAHOHOLDINSs.Web Playwright.API PLAYWRIGHT.GET</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-07-18T08:17:09.183428" level="ERROR">Error in file 'C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\Web_Automation\login_test.robot' on line 2: Library 'test_data.py' does not exist.</msg>
+<msg time="2026-04-04T10:34:20.374443" level="WARN">Error in file 'C:\Users\ARENAHO JUSKA\PycharmProjects\MUHALIARENAHOHOLDINSs\Web Playwright\Test Cases\cart.robot' on line 73: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2026-04-04T10:34:20.841325" level="WARN">Keyword 'DatabaseLibrary.Row Count Is Greater Than X' is deprecated. Use new `Check Row Count` keyword with assertion engine instead.
+The deprecated keyword will be removed in future versions.</msg>
 </errors>
 </robot>

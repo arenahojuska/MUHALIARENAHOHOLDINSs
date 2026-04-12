@@ -1,3 +1,4 @@
+import os
 from datetime import datetime
 from pathlib import Path
 from robot.libraries.BuiltIn import BuiltIn
@@ -9,27 +10,34 @@ class screenshot:
     def take_screenshot(self):
         """
         Captured as 'screenshot.Take Screenshot' in Robot Framework.
-        Saves to: C:\\Users\\arenaho.muhali\\PycharmProjects\\MUHALI_ARENAHO_HOLDINGS\\Web Playwright\\screenshots\\YYYY-MM-DD\\
+        Saves to: [Project Root]/Web Playwright/screenshots/YYYY-MM-DD/
         """
 
-        # 1️⃣ Define the absolute base directory
-        base_path = Path(r"C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\Web Playwright\screenshots")
+        # 1. Define the base directory relative to this file
+        # This finds the folder where screenshot.py is located
+        current_file_path = Path(__file__).resolve()
 
-        # 2️⃣ Create sub-folder for today's date
+        # We move up to the 'Web Playwright' directory
+        # (Assuming screenshot.py is in 'Web Playwright' or a subfolder like 'Libraries')
+        # If it's in 'Test Cases', we go up one level.
+        base_path = current_file_path.parent / "screenshots"
+
+        # 2. Create sub-folder for today's date
         today = datetime.now().strftime("%Y-%m-%d")
         target_folder = base_path / today
 
-        # Ensure the directory exists (parents=True creates the 'screenshots' folder if it's missing too)
+        # Ensure the directory exists
         target_folder.mkdir(parents=True, exist_ok=True)
 
-        # 3️⃣ Create timestamped filename
+        # 3. Create timestamped filename
         timestamp = datetime.now().strftime("%H-%M-%S-%f")[:-3]
         file_path = target_folder / f"{timestamp}.png"
 
-        # 4️⃣ Get screenshot from Browser as bytes
-        screenshot_bytes = BuiltIn().run_keyword("Browser.Take Screenshot", "return_as=bytes")
+        # 4. Get screenshot from Browser as bytes
+        # Note: Ensure 'Library Browser' is initialized in your .robot file
+        screenshot_bytes = BuiltIn().run_keyword("Browser.Take Screenshot", "None", "return_as=bytes")
 
-        # 5️⃣ Save bytes to file
+        # 5. Save bytes to file
         with open(file_path, "wb") as f:
             f.write(screenshot_bytes)
 
