@@ -5,7 +5,7 @@ from groq import Groq
 import io, os, json, re, tempfile, subprocess
 
 # --- 1. CONFIGURATION ---
-GROQ_API_KEY = "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"
+GROQ_API_KEY = "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"
 client = Groq(api_key=GROQ_API_KEY)
 MODEL_ID = "llama-3.3-70b-versatile"
 
