@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Muhali Runner Suite" configfailurepolicy="continue" verbose="2">
+
+    <test name="Headless Regression">
+        <classes>
+            <class name="muhaliholdings.Headless_Runner"/>
+        </classes>
+    </test>
+
+    <test name="Parallel Execution" parallel="methods" thread-count="2">
+        <classes>
+            <class name="muhaliholdings.Parallel_Test"/>
+        </classes>
+    </test>
+
+    <test name="API Regression">
+        <classes>
+            <class name="API_Testing.ApiRegressionSuite"/>
+        </classes>
+    </test>
+
+</suite>

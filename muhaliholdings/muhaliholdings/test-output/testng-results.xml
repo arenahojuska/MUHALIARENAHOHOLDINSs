@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-18T12:52:20 SAST" name="Default suite" finished-at="2026-05-18T12:52:37 SAST" duration-ms="16534">
+    <groups>
+    </groups>
+    <test started-at="2026-05-18T12:52:20 SAST" name="Default test" finished-at="2026-05-18T12:52:37 SAST" duration-ms="16534">
+      <class name="muhaliholdings.Test_Cases">
+        <test-method is-config="true" signature="setup()[pri:0, instance:muhaliholdings.Test_Cases@4e3958e7]" started-at="2026-05-18T12:52:20 SAST" name="setup" finished-at="2026-05-18T12:52:23 SAST" duration-ms="2332" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginTest()[pri:1, instance:muhaliholdings.Test_Cases@4e3958e7]" started-at="2026-05-18T12:52:23 SAST" name="loginTest" finished-at="2026-05-18T12:52:29 SAST" duration-ms="6832" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method signature="cartTest()[pri:2, instance:muhaliholdings.Test_Cases@4e3958e7]" started-at="2026-05-18T12:52:29 SAST" name="cartTest" finished-at="2026-05-18T12:52:35 SAST" depends-on-methods="muhaliholdings.Test_Cases.loginTest" duration-ms="5714" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cartTest -->
+        <test-method signature="priceValidationTest()[pri:3, instance:muhaliholdings.Test_Cases@4e3958e7]" started-at="2026-05-18T12:52:35 SAST" name="priceValidationTest" finished-at="2026-05-18T12:52:36 SAST" depends-on-methods="muhaliholdings.Test_Cases.cartTest" duration-ms="1239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- priceValidationTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:muhaliholdings.Test_Cases@4e3958e7]" started-at="2026-05-18T12:52:36 SAST" name="tearDown" finished-at="2026-05-18T12:52:37 SAST" duration-ms="339" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- muhaliholdings.Test_Cases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite configfailurepolicy="continue" name="Failed suite [Muhali Runner Suite]" guice-stage="DEVELOPMENT" verbose="2">
+  <test thread-count="5" name="Headless Regression(failed)" verbose="2">
+    <classes>
+      <class name="muhaliholdings.Headless_Runner">
+        <methods>
+          <include name="pricePhase"/>
+          <include name="cartPhase"/>
+          <include name="tearDown"/>
+          <include name="loginPhase"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- muhaliholdings.Headless_Runner -->
+    </classes>
+  </test> <!-- Headless Regression(failed) -->
+  <test thread-count="5" parallel="methods" name="Parallel Execution(failed)" verbose="2">
+    <classes>
+      <class name="muhaliholdings.Parallel_Test">
+        <methods>
+          <include name="runParallel"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- muhaliholdings.Parallel_Test -->
+    </classes>
+  </test> <!-- Parallel Execution(failed) -->
+</suite> <!-- Failed suite [Muhali Runner Suite] -->
