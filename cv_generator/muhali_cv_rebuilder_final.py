@@ -2,11 +2,16 @@ import streamlit as st
 import fitz  # PyMuPDF
 from docx import Document
 from groq import Groq
+import streamlit as st
 import io, os, json, re, tempfile, subprocess
 
 # --- 1. CONFIGURATION ---
-GROQ_API_KEY = "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"
-client = Groq(api_key=GROQ_API_KEY)
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+
+client = Groq(
+    api_key=GROQ_API_KEY
+)
+
 MODEL_ID = "llama-3.3-70b-versatile"
 
 # Path to the Node.js CV builder script (same folder as this file)
