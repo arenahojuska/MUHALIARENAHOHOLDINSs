@@ -12,7 +12,7 @@ client = Groq(
     api_key=GROQ_API_KEY
 )
 
-MODEL_ID = "llama-3.3-70b-versatile"
+MODEL_ID = "openai/gpt-oss-20b"
 
 # Path to the Node.js CV builder script (same folder as this file)
 CV_BUILDER_JS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "build_cv.js")
