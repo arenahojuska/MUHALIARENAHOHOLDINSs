@@ -1,0 +1,32 @@
+# Eclipse workspace
+.metadata/
+
+# IntelliJ
+.idea/
+
+# Eclipse project settings
+.settings/
+.classpath
+.project
+
+# Java build files
+target/
+bin/
+out/
+*.class
+
+# ZIP backup files
+*.zip
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# TestNG generated reports
+test-output/
+
+# Test screenshots
+screenshots/
