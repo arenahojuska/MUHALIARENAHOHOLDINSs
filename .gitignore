@@ -1,0 +1,13 @@
+.metadata/
+.idea/
+*.class
+bin/
+target/
+test-output/
+screenshots/
+__pycache__/
+*.pyc
+~$*
+rpa-env/
+*.zip
+maven/
