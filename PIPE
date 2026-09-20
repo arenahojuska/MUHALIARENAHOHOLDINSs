@@ -1,0 +1,25 @@
+INFO: Could not find files for the given pattern(s).
+Traceback (most recent call last):
+  File "C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\pdfkit\configuration.py", line 35, in __init__
+    with open(self.wkhtmltopdf) as f:
+         ~~~~^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: b''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\arenaho.muhali\PycharmProjects\MUHALI_ARENAHO_HOLDINGS\Web_Automation/generate_robot_report_pdf.py", line 18, in <module>
+    pdfkit.from_file(report_html, output_pdf)  # add config=config if needed
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\pdfkit\api.py", line 48, in from_file
+    r = PDFKit(input, 'file', options=options, toc=toc, cover=cover, css=css,
+               configuration=configuration, cover_first=cover_first, verbose=verbose)
+  File "C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\pdfkit\pdfkit.py", line 45, in __init__
+    self.configuration = (Configuration() if configuration is None
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\arenaho.muhali\AppData\Local\Programs\Python\Python313\Lib\site-packages\pdfkit\configuration.py", line 38, in __init__
+    raise IOError('No wkhtmltopdf executable found: "%s"\n'
+    ...<3 lines>...
+                  'https://github.com/JazzCore/python-pdfkit/wiki/Installing-wkhtmltopdf' % self.wkhtmltopdf)
+OSError: No wkhtmltopdf executable found: "b''"
+If this file exists please check that this process can read it or you can pass path to it manually in method call, check README. Otherwise please install wkhtmltopdf - https://github.com/JazzCore/python-pdfkit/wiki/Installing-wkhtmltopdf

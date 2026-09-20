@@ -1,0 +1,3 @@
+Method,Name,Error,Occurrences
+GET,/api/v2/pokemon/ditto,RemoteDisconnected('Remote end closed connection without response'),195
+GET,/api/v2/pokemon/ditto,"SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1028)'))",75

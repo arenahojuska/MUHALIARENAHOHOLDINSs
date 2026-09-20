@@ -1,0 +1,23 @@
+{"level":30,"time":"2026-04-03T19:26:35.762Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"Listening on 127.0.0.1:55253"}
+{"level":30,"time":"2026-04-03T19:26:35.886Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"Start of node method newContext"}
+{"level":30,"time":"2026-04-03T19:26:35.887Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"Creating new context with options: {\"acceptDownloads\":true,\"baseURL\":\"https://pokeapi.co\",\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2026-04-03T19:26:35.887Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"No active browser, creating a new one"}
+{"level":30,"time":"2026-04-03T19:26:36.138Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"Trace file: "}
+{"level":30,"time":"2026-04-03T19:26:36.168Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"Setting default timeout for context context=deda5e25-b059-4050-9595-be55486e3a13 to 10000"}
+{"level":30,"time":"2026-04-03T19:26:36.168Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"Changed active context: context=deda5e25-b059-4050-9595-be55486e3a13"}
+{"level":30,"time":"2026-04-03T19:26:36.169Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"End of node method newContext"}
+{"level":30,"time":"2026-04-03T19:26:36.207Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-04-03T19:26:36.209Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-04-03T19:26:36.216Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-04-03T19:26:36.217Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-04-03T19:26:36.227Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-04-03T19:26:36.227Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-04-03T19:26:36.237Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-04-03T19:26:36.237Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-04-03T19:26:36.246Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"Changed active context: context=deda5e25-b059-4050-9595-be55486e3a13"}
+{"level":30,"time":"2026-04-03T19:26:36.254Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"Start of node method closeContext"}
+{"level":30,"time":"2026-04-03T19:26:36.269Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"End of node method closeContext"}
+{"level":30,"time":"2026-04-03T19:26:36.295Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-04-03T19:26:36.295Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-04-03T19:26:36.381Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-04-03T19:26:36.539Z","pid":6836,"hostname":"DESKTOP-49IIODT","msg":"End of node method closeAllBrowsers"}

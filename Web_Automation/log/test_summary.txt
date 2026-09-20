@@ -1,0 +1,6 @@
+
+===== Arenaho Test Summary =====
+Total Tests: N/A
+Passed:      N/A
+Failed:      N/A
+================================
