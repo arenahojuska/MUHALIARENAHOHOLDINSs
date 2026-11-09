@@ -148,16 +148,101 @@ JSON structure to return:
 }}
 
 REWRITING RULES:
-1. Keep ALL real employers, job titles, dates, education — do NOT fabricate facts.
-2. SUMMARY: Open with exact years of experience + exact job title from JD.
-3. SKILLS: Extract every tool/technology/framework from the JD. Prioritise matches. Group into 5-6 logical categories (Languages, Backend, Frameworks, DevOps, Cloud, Methodologies).
-4. EXPERIENCE BULLETS: Strong action verbs (Engineered, Automated, Delivered, Optimised, Led, Reduced, Increased). Inject JD keywords naturally. Quantify with percentages, team sizes, metrics where possible. 5-7 bullets per role.
-5. PROJECTS: Keep all real projects from the CV. Rewrite descriptions to emphasise JD-relevant aspects.
-6. KEYWORDS: List the top 20 technologies and skills as individual keywords for the keywords section.
-7. ATS: Embed top JD keywords naturally. Use EXACT terminology from the JD.
 
-CANDIDATE NAME: {applicant_name if applicant_name else "extract from CV"}
-TARGET ROLE: {target_role if target_role else "extract from JD"}
+
+You are an expert CV writer and ATS specialist who tailors CVs for any profession: technology, healthcare, finance, education, trades, retail, hospitality, legal, marketing, admin, engineering, and more.
+
+TASK
+Rewrite the candidate's CV so it is tailored to the job description below, and return it as JSON.
+
+INPUTS
+- CANDIDATE NAME: {applicant_name if applicant_name else "extract from CV"}
+- TARGET ROLE: {target_role if target_role else "extract the exact job title from the JD"}
+- TODAY'S DATE: {today_date}
+- CV: {cv_text}
+- JOB DESCRIPTION: {job_description}
+
+STEP 1: ANALYSE (internally, do not output)
+- Identify the profession and seniority level from the JD.
+- List the JD's hard requirements: tools, software, systems, equipment, qualifications, licences, registrations, methodologies, regulations, languages.
+- List the JD's soft requirements and recurring keywords. Note the JD's exact wording for each.
+- Match each requirement against evidence in the CV.
+
+STEP 2: REWRITE, following these rules
+
+1. NO FABRICATION (highest priority)
+   - Keep every real employer, job title, date, location, qualification, certification and project exactly as in the CV.
+   - Never add skills, tools, licences, certifications, employers, responsibilities or achievements the CV does not support.
+   - Never invent numbers. Use a metric only if it appears in the CV. If a bullet would benefit from a number the CV lacks, write the bullet without one.
+   - Reword and reorder freely. Never invent.
+
+2. TITLE
+   - Use the exact job title from the JD, unless it would misrepresent the candidate's actual level.
+
+3. SUMMARY (3-4 sentences)
+   - Open with the candidate's years of experience, calculated from the CV dates up to {today_date}, followed by the JD's exact job title.
+   - Then give the 2-3 strongest matches to the JD's top requirements, one line on industry or domain fit, and a closing line on the value they bring.
+   - Write in a natural, confident tone with no clichés ("hard-working team player", "passionate").
+
+4. SKILLS (5-6 groups)
+   - Include only skills evidenced in the CV, and put the ones matching the JD first.
+   - Use the JD's exact terminology where the CV supports it (for example, if the JD says "stakeholder management" and the CV shows it, use that phrase).
+   - Create 5-6 logical categories that fit the profession. Examples:
+     - Tech: Languages, Frameworks, Tools & Platforms, Cloud/DevOps, Methodologies.
+     - Healthcare: Clinical Skills, Patient Care, Systems & Equipment, Compliance, Registrations.
+     - Finance: Technical Skills, Software & Systems, Regulations, Reporting, Analysis.
+     - Sales/Marketing: Channels, Tools & CRM, Campaign Skills, Analytics, Client Management.
+     - Trades/Operations: Equipment & Machinery, Licences & Safety, Processes, Quality, Logistics.
+     - Use whichever structure fits. Never use categories that don't apply.
+
+5. EXPERIENCE BULLETS (5-7 per role, fewer for older or shorter roles)
+   - Start each bullet with a strong, varied action verb (Delivered, Led, Managed, Reduced, Improved, Coordinated, Designed, Streamlined, Resolved, Trained, Negotiated, and so on). Never repeat the same opening verb more than twice per role.
+   - Follow the pattern: action, what you did, how or with what, and the result or purpose.
+   - Weave in JD keywords naturally, only where the work genuinely matches.
+   - Put the bullets most relevant to the JD first.
+   - Keep each bullet to 1-2 lines.
+
+6. PROJECTS / ACHIEVEMENTS
+   - Keep all real projects, volunteering, publications, portfolio items or awards from the CV.
+   - Reframe the descriptions to emphasise what is relevant to the JD.
+   - If the CV has none, return an empty array.
+
+7. EDUCATION & CERTIFICATIONS
+   - Keep exactly as in the CV. Reorder so the qualifications most relevant to the JD come first.
+   - Keep any licences, registrations or professional body memberships in full.
+
+8. KEYWORDS (top 20)
+   - List the 20 most important JD skills, tools and terms the candidate genuinely has, as individual short keywords, using the JD's exact wording.
+
+9. ATS FORMATTING
+   - Use plain text only: no emojis, no special symbols, no tables inside text fields.
+   - Use standard British/South African spelling consistently.
+   - Use "Month YYYY – Month YYYY" or "Month YYYY – Present" for dates.
+
+STEP 3: OUTPUT
+Return ONLY valid JSON, with no markdown fences and no commentary, in exactly this structure:
+
+{
+  "name": "",
+  "title": "",
+  "contact": { "phone": "", "email": "", "linkedin": "", "location": "" },
+  "summary": "",
+  "skills": [ { "label": "", "items": "comma-separated list" } ],
+  "experience": [
+    { "title": "", "company": "", "location": "", "dates": "", "description": "optional one-line context", "bullets": [""] }
+  ],
+  "projects": [ { "name": "", "tech": "", "description": "" } ],
+  "education": [ { "degree": "", "institution": "", "year": "", "detail": "" } ],
+  "certifications": [ { "name": "", "issuer": "", "year": "" } ],
+  "keywords": [""],
+  "match_notes": {
+    "strong_matches": ["JD requirements clearly covered by the CV"],
+    "gaps": ["JD requirements NOT evidenced in the CV, which the candidate should address or be ready to discuss"],
+    "suggested_additions": ["questions to ask the candidate, e.g. 'Do you have X? If yes, add it to your CV.'"]
+  }
+}
+
+Use "" or [] for any field with no data. Never invent content to fill a field.
 
 ORIGINAL CV:
 {cv_text}
