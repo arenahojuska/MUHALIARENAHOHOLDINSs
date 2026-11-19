@@ -260,13 +260,23 @@ JOB DESCRIPTION:
             {"role": "system", "content": "You are an elite CV writer. Return ONLY valid JSON. No markdown, no explanation, no text outside the JSON object."},
             {"role": "user", "content": prompt}
         ],
-        max_tokens=4096,
+        max_tokens=8192,
         temperature=0.3
     )
 
-    raw = response.choices[0].message.content
+    choice = response.choices[0]
+    if choice.finish_reason == "length":
+        raise ValueError("The AI ran out of space before finishing the CV. Please click the button again.")
+
+    raw = choice.message.content or ""
     # Strip any accidental markdown fences
-    cleaned = re.sub(r"```(?:json)?", "", raw).strip().rstrip("`").strip()
+    cleaned = re.sub(r"```(?:json)?", "", raw).strip()
+    # Keep only the JSON object, in case the AI added text before or after it
+    start, end = cleaned.find("{"), cleaned.rfind("}")
+    if start != -1 and end != -1:
+        cleaned = cleaned[start:end + 1]
+    # Remove stray commas before } or ], a common AI mistake
+    cleaned = re.sub(r",\s*([}\]])", r"\1", cleaned)
     return json.loads(cleaned)
 
 
